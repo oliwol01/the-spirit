@@ -1,0 +1,21 @@
+<div class="col-auto px-1 spirit-venue-card">
+
+  <div>
+
+    <img
+      src="{{ url_for('static', filename=venue.image) }}"
+      alt="{{ venue.name }}"
+      class="img-fluid rounded-3 mb-2"
+    >
+
+    <h3 class="fs-4 fw-normal spirit-text-red spirit-hero-subtitle lh-1 mb-1">
+      {{ venue.name }}
+    </h3>
+
+    <span class="badge rounded-pill text-bg-light fw-normal px-3 py-1">
+      {{ venue.type }}
+    </span>
+
+  </div>
+
+</div>

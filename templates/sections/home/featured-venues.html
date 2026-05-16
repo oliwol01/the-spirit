@@ -1,0 +1,28 @@
+<section class="container py-4">
+
+  <h2 class="text-center fw-semibold fs-3 mb-4">
+    Explore spaces open to collaboration
+  </h2>
+
+  <div class="row g-1 mb-4 justify-content-center">
+
+    {% for venue in venues %}
+
+      {% include "components/venue-card.html" %}
+
+    {% endfor %}
+
+  </div>
+
+  <div class="text-end">
+
+    <a
+      href="#"
+      class="btn spirit-btn-red rounded-3 px-4 py-2"
+    >
+      See more →
+    </a>
+
+  </div>
+
+</section>

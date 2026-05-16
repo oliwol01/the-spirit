@@ -1,0 +1,48 @@
+/* ── FOOTER ───────────────────────────────── */
+
+.spirit-footer {
+  background: #e60000;
+  color: #fff;
+}
+
+.spirit-footer-logo {
+  height: 28px;
+}
+
+/* column headings */
+
+.spirit-footer-heading {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
+}
+
+/* nav + address links */
+
+.spirit-footer-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.925rem;
+  transition: color 0.15s;
+}
+
+.spirit-footer-link:hover {
+  color: #fff;
+}
+
+/* social icons */
+
+.spirit-footer-social {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.spirit-footer-social:hover {
+  opacity: 0.7;
+  color: #fff;
+}

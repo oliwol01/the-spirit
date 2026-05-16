@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Spirit</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/home.css') }}"
+/>
+{% endblock %}
+
+{% block content %}
+
+{% include "sections/home/hero.html" %}
+{% include "sections/home/about.html" %}
+{% include "sections/home/user-selector.html" %}
+{% include "sections/home/makers.html" %}
+{% include "sections/home/featured-venues.html" %}
+{% include "sections/home/venues.html" %}
+
+
+{% endblock %}
