@@ -1,0 +1,93 @@
+/* ── LOGO ─────────────────────────────────── */
+
+.spirit-logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0;
+}
+
+.spirit-logo {
+  height: 22px;
+}
+
+@media (max-width: 991px) {
+
+  .spirit-logo-wrapper {
+    position: static;
+    transform: none;
+  }
+
+  .spirit-logo {
+    height: 20px;
+  }
+
+}
+
+/* ── HAMBURGER BUTTON ─────────────────────── */
+
+.spirit-menu-btn {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+/* three-line icon */
+
+.spirit-hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 16px;
+}
+
+.spirit-hamburger span {
+  display: block;
+  height: 1.5px;
+  border-radius: 2px;
+  background: #e60000;
+  transition: width 0.2s ease;
+}
+
+.spirit-hamburger span:first-child {
+  width: 100%;
+}
+
+.spirit-hamburger span:nth-child(2) {
+  width: 70%;
+}
+
+.spirit-hamburger span:last-child {
+  width: 100%;
+}
+
+.spirit-menu-btn:hover .spirit-hamburger span:nth-child(2) {
+  width: 100%;
+}
+
+/* ── DROPDOWN ─────────────────────────────── */
+
+.spirit-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 190px;
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-6px) scale(0.98);
+  transform-origin: top right;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s;
+}
+
+#menu-toggle:checked ~ .container .spirit-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}

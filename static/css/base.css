@@ -1,0 +1,70 @@
+/* ── TOKENS ───────────────────────────────── */
+
+:root {
+  --spirit-red: #e60000;
+  --spirit-dark: #271424;
+  --spirit-bg: #f4efe9;
+}
+
+/* ── BASE ─────────────────────────────────── */
+
+body {
+  background: var(--spirit-bg);
+  font-family: "Inter", sans-serif;
+}
+
+/* shared typography */
+
+.spirit-footer-heading,
+.spirit-hero-title,
+.spirit-hero-subtitle,
+.spirit-user-selector-title {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* shared brand colors */
+
+.spirit-link,
+.spirit-dropdown-link,
+.spirit-text-red {
+  color: var(--spirit-red);
+}
+
+.spirit-link:hover,
+.spirit-dropdown-link:hover {
+  color: var(--spirit-red);
+  opacity: 1;
+}
+
+.spirit-link {
+  transition: opacity 0.15s;
+}
+
+.spirit-link:hover {
+  opacity: 0.7;
+}
+.spirit-btn-red {
+  background: var(--spirit-red);
+  color: white;
+}
+
+.spirit-btn-red:hover {
+  background: var(--spirit-red);
+  color: white;
+  opacity: 0.9;
+}
+
+.spirit-bg-red-subtle {
+  background: rgba(230, 0, 0, 0.08);
+}
+
+.spirit-btn-outline-red {
+  border: 1px solid var(--spirit-red);
+  color: var(--spirit-red);
+  background: transparent;
+}
+
+.spirit-btn-outline-red:hover {
+  background: var(--spirit-red);
+  color: white;
+}
