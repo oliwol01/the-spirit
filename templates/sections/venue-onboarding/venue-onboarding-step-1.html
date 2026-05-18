@@ -1,0 +1,86 @@
+<section class="spirit-hero-top text-center px-3 py-4">
+
+    <h2 class="spirit-hero-title spirit-text-red mb-6">
+        Onboarding
+    </h2>
+
+  <img
+    src="{{ url_for('static', filename='img/global/progress-bar-step-1.png') }}"
+    alt="Step 1"
+    class="spirit-keyhole mb-2"
+    aria-hidden="true"
+  />
+<!-- potentially h3 heading for 'details' -->
+</section>
+
+<form>
+
+<!-- check standard for label vs id -->
+<!-- check if can only choose one - this is a radio button I think? -->
+<!-- check if I need to include a name after type for the db -->
+<!-- check how to force answers -->
+
+  <div class="mb-3">
+    <label for="venue-name" class="form-label">What is your name?*</label>
+    <input type="text" class="form-control" id="venue-name">
+  </div>
+
+  <div class="mb-3">
+
+    <label class="form-label">Which prayer house or other location do you represent?*</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="church" id="church">
+        <label class="form-check-label" for="church">
+            Church
+        </label>
+      </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="mosque" id="mosque">
+      <label class="form-check-label" for="mosque">
+        Mosque
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="synagogue" id="synagogue">
+      <label class="form-check-label" for="synagogue">
+        Synagogue
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="temple" id="temple">
+      <label class="form-check-label" for="temple">
+        Temple
+      </label>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="venue-description" class="form-label">Description if preferred:</label>
+    <input type="text" class="form-control" id="venue-description">
+  </div>
+
+  <div class="mb-3">
+    <label for="venue-email" class="form-label">Email Address*</label>
+    <input type="email" class="form-control" id="venue-email">
+  </div>  
+
+  <div class="mb-3">
+    <label for="venue-telephone" class="form-label">Telephone Number*</label>
+    <input type="tel" class="form-control" id="venue-telephone">
+  </div>  
+
+  <div class="text-end">
+
+    <a
+      href="#"
+      class="btn spirit-btn-red rounded-3 px-4 py-2"
+    >
+      Next →
+    </a>
+
+  </div>
+

@@ -68,3 +68,8 @@ body {
   background: var(--spirit-red);
   color: white;
 }
+
+.btn-check:checked + .spirit-btn-outline-red {
+  background: var(--spirit-red);
+  color: white;
+}
