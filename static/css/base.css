@@ -16,7 +16,7 @@ body {
 /* shared typography */
 
 .spirit-footer-heading,
-.spirit-hero-title,
+.spirit-title-page,
 .spirit-hero-subtitle,
 .spirit-user-selector-title {
   font-family: "Cormorant Garamond", serif;
@@ -67,4 +67,11 @@ body {
 .spirit-btn-outline-red:hover {
   background: var(--spirit-red);
   color: white;
+}
+.spirit-keyhole {
+  height: 80px;
+}
+.spirit-title-page {
+  color: #e60000;
+  max-width: 700px;
 }

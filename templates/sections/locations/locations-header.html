@@ -1,0 +1,18 @@
+<section id="locations-header" class="container-fluid px-0">
+  <div class="text-center px-3 py-4">
+    <img
+      src="{{ url_for('static', filename='img/global/keyhole-red.png') }}"
+      alt=""
+      class="spirit-keyhole mb-2"
+      aria-hidden="true"
+    />
+
+    <h1 class="spirit-title-page fw-normal display-4 mx-auto">Locations</h1>
+  </div>
+  <div
+    id="locations-map"
+    data-venues='{{ venues | tojson | safe }}'
+  ></div>
+
+  <script src="{{ url_for('static', filename='js/locations.js') }}"></script>
+</section>

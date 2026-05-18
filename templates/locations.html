@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Locations
+{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/locations.css') }}"
+>
+{% endblock %}
+
+{% block content %}
+
+    {% include "sections/locations/locations-header.html" %}
+    {% include "sections/locations/locations-filter.html" %}
+
+{% endblock %}
