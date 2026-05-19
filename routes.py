@@ -44,3 +44,17 @@ def init_routes(app):
             "index.html",
             venues=venues
         )
+
+    @app.route("/maker-onboarding2")
+    def maker_onboarding2():
+
+        return render_template(
+            "maker-onboarding2.html"
+        )
+    
+    @app.route("/maker-onboarding1")
+    def maker_onboarding1():
+
+        return render_template(
+            "maker-onboarding1.html"
+        )
