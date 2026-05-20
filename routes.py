@@ -44,3 +44,7 @@ def init_routes(app):
             "index.html",
             venues=venues
         )
+    
+    @app.route("/venue-onboarding")
+    def venue_onboarding():
+        return render_template("venue-onboarding.html")

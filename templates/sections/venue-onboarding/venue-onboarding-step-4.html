@@ -1,0 +1,58 @@
+<section class="spirit-hero-top text-center px-3 py-4">
+
+    <h2 class="spirit-hero-title spirit-text-red mb-6">
+        Onboarding
+    </h2>
+
+  <img
+    src="{{ url_for('static', filename='img/global/progress-bar-step-3.png') }}"
+    alt="Step 3"
+    class="spirit-keyhole mb-2"
+    aria-hidden="true"
+  />
+<!-- potentially h3 heading for 'Venue Photos' -->
+</section>
+
+<h3>Venue Photos</h3>
+
+<p>Photos help makers understand the atmosphere and possibilities of your space.<br>
+    You can upload up to 4 photos.</p>
+
+<p class="form=label">Cover photo*</p>
+<label for="cover-photo" class="d-flex flex-column align-items-center justify-content-center 
+       w-100 p-4 rounded-3 text-center" 
+       style="border: 2px dashed #E60000; cursor: pointer; background: #fdf5f5;">
+  <i class="bi bi-image fs-3 text-secondary"></i>
+  <strong class="mt-2">Upload cover photo</strong>
+  <small class="text-muted">JPG or PNG, max 10MB<br>Recommended: 16:9 landscape</small>
+  <input type="file" id="cover-photo" class="d-none" accept=".jpg,.png">
+</label>
+
+<p class="form-label">Additional photos (optional)</p>
+<div class="d-flex gap-3">
+
+    <label for="additional-photo-1" class="d-flex flex-column align-items-center justify-content-center 
+        flex-fill p-4 rounded-3 text-center" 
+        style="border: 2px dashed #E60000; cursor: pointer; background: #fdf5f5;">
+    <i class="bi bi-plus fs-3 text-secondary"></i>
+    <strong class="mt-2">Add photo</strong>
+    <input type="file" id="additional-photo-1" class="d-none" accept=".jpg,.png">
+    </label>
+
+    <label for="additional-photo-2" class="d-flex flex-column align-items-center justify-content-center 
+        flex-fill p-4 rounded-3 text-center" 
+        style="border: 2px dashed #E60000; cursor: pointer; background: #fdf5f5;">
+    <i class="bi bi-plus fs-3 text-secondary"></i>
+    <strong class="mt-2">Add photo</strong>
+    <input type="file" id="additional-photo-2" class="d-none" accept=".jpg,.png">
+    </label>
+
+    <label for="additional-photo-3" class="d-flex flex-column align-items-center justify-content-center 
+        flex-fill p-4 rounded-3 text-center" 
+        style="border: 2px dashed #E60000; cursor: pointer; background: #fdf5f5;">
+    <i class="bi bi-plus fs-3 text-secondary"></i>
+    <strong class="mt-2">Add photo</strong>
+    <input type="file" id="additional-photo-3" class="d-none" accept=".jpg,.png">
+    </label>
+
+</div>
