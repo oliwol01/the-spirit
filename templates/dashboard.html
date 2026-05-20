@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - The Spirit{% endblock%}
+
+{% block extra_css %}
+<link rel = "stylesheet" href="{{url_for('static', filename='css/dashboard.css') }}" />
+{%endblock%}
+
+{%block content%}
+
+<main class="container py-5">
+    <h1 class="dashboard-greeting mb-5">Hello, Apostolisch Genootschap</h1>
+<div class="row gx-0 dashboard-stats mb-5">
+
+    <div class="col-4 text-center dashboard-stat">
+        <p class="dashboard-stat-number">2</p>
+        <p class="dashboard-stat-label fw-semibold">Awaiting Response</p>
+        <p class="dashboard-stat-sub text-muted small">Proposals waiting for your response</p>
+    </div>
+
+    <div class="col-4 text-center dashboard-stat dashboard-stat--bordered">
+        <p class="dashboard-stat-number">1</p>
+        <p class="dashboard-stat-label fw-semibold">Awaiting Clarification</p>
+        <p class="dashboard-stat-sub text-muted small">Makers are waiting for your reply</p>
+    </div>
+
+    <div class="col-4 text-center dashboard-stat">
+        <p class="dashboard-stat-number">3</p>
+        <p class="dashboard-stat-label fw-semibold">Active Collaborations</p>
+        <p class="dashboard-stat-sub text-muted small">Ongoing collaborations in progress</p>
+    </div>
+</div>
+
+<h2 class="dashboard-manage-title mb-4">Manage</h2>
+
+<div class="d-flex gap-4">
+
+    <a href="#" class="dashboard-card text-decoration-none text-center">
+        <i class="bi bi-envelope dashboard-card-icon"></i>
+        <p class="dashboard-card-label spirit-text-red fw-semibold mt-3 mb-0">Inbox</p>
+    </a>
+
+    <a href="#" class="dashboard-card text-decoration-none text-center">
+        <i class="bi bi-house dashboard-card-icon"></i>
+        <p class="dashboard-card-label spirit-text-red fw-semibold mt-3 mb-0">Venue Profile</p>
+    </a>
+
+</div>
+
+</main>
+{% endblock %}
