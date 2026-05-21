@@ -43,27 +43,27 @@
 
                 <div class="tag-container">
 
-                    <button type="button" class="tag active">
+                    <button type="button" class="tag">
                         Music
                     </button>
 
-                    <button type="button" class="tag active">
+                    <button type="button" class="tag">
                         Mindfulness
                     </button>
-
-                    <button type="button" class="tag active">
+                    
+                    <button type="button" class="tag">
                         Ceremony
                     </button>
 
-                    <button type="button" class="tag active">
+                   <button type="button" class="tag">
                         Silence
                     </button>
 
-                    <button type="button" class="tag active">
+                    <button type="button" class="tag">
                         Storytelling
                     </button>
 
-                    <button type="button" class="tag active">
+                    <button type="button" class="tag">
                         Dance
                     </button>
 
@@ -79,7 +79,7 @@
                         Theatre
                     </button>
 
-                    <button type="button" class="tag active">
+                    <button type="button" class="tag">
                         Concert
                     </button>
 
@@ -91,6 +91,13 @@
             </div>
 
             <!-- BUTTON -->
+<script>
+document.querySelectorAll('.tag').forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('active');
+    });
+});
+</script>
 <a href="javascript:void(0)" class="next-btn text-decoration-none" onclick="showSection(2)">
   Next
 </a>

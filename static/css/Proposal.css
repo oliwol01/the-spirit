@@ -15,8 +15,10 @@
 }
 
 .section-title {
-    font-size: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
     font-weight: 600;
+    color: #B74444;
     margin-bottom: 40px;
 }
 
@@ -62,10 +64,12 @@
     border-radius: 14px;
     background: white;
     font-weight: 500;
+    transition: 0.2s ease;
 }
 
 .tag.active {
     background: #EAA0A0;
+    color: white;
 }
 
 .next-btn {
