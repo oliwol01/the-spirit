@@ -50,4 +50,10 @@ def init_routes(app):
 
         return render_template(
             "maker-onboarding.html"
-        )
+        ) 
+    @app.route("/venue-profile")
+    def venue_profile():
+        return render_template("venue_profile.html")
+    @app.route("/dashboard")
+    def dashboard():
+        return render_template("dashboard.html")

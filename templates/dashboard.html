@@ -1,51 +1,47 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard - The Spirit{% endblock%}
+{% block title %}Dashboard - The Spirit{% endblock %}
 
 {% block extra_css %}
-<link rel = "stylesheet" href="{{url_for('static', filename='css/dashboard.css') }}" />
-{%endblock%}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" />
+{% endblock %}
 
-{%block content%}
-
+{% block content %}
 <main class="container py-5">
-    <h1 class="dashboard-greeting mb-5">Hello, Apostolisch Genootschap</h1>
-<div class="row gx-0 dashboard-stats mb-5">
 
-    <div class="col-4 text-center dashboard-stat">
-        <p class="dashboard-stat-number">2</p>
-        <p class="dashboard-stat-label fw-semibold">Awaiting Response</p>
-        <p class="dashboard-stat-sub text-muted small">Proposals waiting for your response</p>
+  <h1 class="form-title text-center mb-5">Hello, Apostolisch Genootschap</h1>
+
+  <div class="row gx-0 stats-bar mb-5">
+    <div class="col-12 col-md-4 text-center stat">
+      <p class="stat-number">2</p>
+      <p class="fw-semibold">Awaiting Response</p>
+      <p class="small text-muted">Proposals waiting for your response</p>
     </div>
-
-    <div class="col-4 text-center dashboard-stat dashboard-stat--bordered">
-        <p class="dashboard-stat-number">1</p>
-        <p class="dashboard-stat-label fw-semibold">Awaiting Clarification</p>
-        <p class="dashboard-stat-sub text-muted small">Makers are waiting for your reply</p>
+    <div class="col-12 col-md-4 text-center stat stat-middle">
+      <p class="stat-number">1</p>
+      <p class="fw-semibold">Awaiting Clarification</p>
+      <p class="small text-muted">Makers are waiting for your reply</p>
     </div>
-
-    <div class="col-4 text-center dashboard-stat">
-        <p class="dashboard-stat-number">3</p>
-        <p class="dashboard-stat-label fw-semibold">Active Collaborations</p>
-        <p class="dashboard-stat-sub text-muted small">Ongoing collaborations in progress</p>
+    <div class="col-12 col-md-4 text-center stat">
+      <p class="stat-number">3</p>
+      <p class="fw-semibold">Active Collaborations</p>
+      <p class="small text-muted">Ongoing collaborations in progress</p>
     </div>
-</div>
+  </div>
 
-<h2 class="dashboard-manage-title mb-4">Manage</h2>
+  <p class="subheader mb-4">Manage</p>
 
-<div class="d-flex gap-4">
-
-    <a href="#" class="dashboard-card text-decoration-none text-center">
-        <i class="bi bi-envelope dashboard-card-icon"></i>
-        <p class="dashboard-card-label spirit-text-red fw-semibold mt-3 mb-0">Inbox</p>
+  <div class="d-flex gap-4">
+    <a href="#" class="manage-card text-decoration-none text-center">
+      <i class="bi bi-envelope manage-card-icon"></i>
+      <p class="spirit-text-red fw-semibold mt-3 mb-0">Inbox</p>
     </a>
-
-    <a href="#" class="dashboard-card text-decoration-none text-center">
-        <i class="bi bi-house dashboard-card-icon"></i>
-        <p class="dashboard-card-label spirit-text-red fw-semibold mt-3 mb-0">Venue Profile</p>
+    <a href="#" class="manage-card text-decoration-none text-center">
+      <i class="bi bi-house manage-card-icon"></i>
+      <p class="spirit-text-red fw-semibold mt-3 mb-0">Venue Profile</p>
     </a>
-
-</div>
+  </div>
 
 </main>
 {% endblock %}

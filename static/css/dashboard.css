@@ -1,53 +1,31 @@
-.dashboard-greeting {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: var(--spirit-red);
+.stats-bar {
+  background: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem calc(50vw - 50%);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.dashboard-stats {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 2rem 0;
+.stat {
+  padding: 1rem 0;
 }
 
-.dashboard-stat {
-    padding: 1rem 0;
+.stat-middle {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 
-.dashboard-stat--bordered {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd
-}
-
-.dashboard-stat-number {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 4rem;
-    font-weight: 400;
-    color: var(--spirit-red);
-    margin-bottom: 0.25rem;
-    line-height: 1;
-}
-
-.dashboard-stat-label {
-  font-size: 1rem;
-  color: var(--spirit-dark);
+.stat-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--spirit-red);
   margin-bottom: 0.25rem;
+  line-height: 1;
 }
 
-.dashboard-stat-sub {
-  font-size: 0.8rem;
-  color: #888;
-  margin-bottom: 0;
-}
-
-.dashboard-manage-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--spirit-dark);
-}
-
-.dashboard-card {
+.manage-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,15 +38,20 @@
   transition: box-shadow 0.15s;
 }
 
-.dashboard-card:hover {
+.manage-card:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.dashboard-card-icon {
+.manage-card-icon {
   font-size: 2.2rem;
   color: var(--spirit-red);
 }
 
-.dashboard-card-label {
-  font-size: 0.95rem;
+@media (max-width: 767px) {
+  .stat-middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
 }
