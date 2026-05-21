@@ -1,109 +1,91 @@
-<section class="spirit-hero-top text-center px-3 py-4">
-
-    <h2 class="spirit-hero-title spirit-text-red mb-5">
-        Onboarding
-    </h2>
-
-  <img
-    src="{{ url_for('static', filename='img/global/progress-bar-step-1.png') }}"
-    alt="Step 1"
-    class="spirit-keyhole mb-2"
-    aria-hidden="true"
-    style="max-width: 600px;"
-  />
-
-</section>
-
-<h3 class="mb-4">Venue Details</h3>
-
-<!-- check standard for label vs id -->
-<!-- check if can only choose one - this is a radio button I think? -->
-<!-- check how to force answers -->
-
-  <div class="mb-3">
-    <label for="venue-name" class="form-label">What is your venue name?*</label>
-    <input type="text" class="form-control" id="venue-name" name="venue-name">
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
   </div>
-
-  <div class="mb-3">
-
-    <label class="form-label">Which prayer house or other location do you represent?*</label>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="venue-type" value="church" id="church">
-        <label class="form-check-label" for="church">
-            Church
-        </label>
-      </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="venue-type" value="mosque" id="mosque">
-      <label class="form-check-label" for="mosque">
-        Mosque
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="venue-type" value="synagogue" id="synagogue">
-      <label class="form-check-label" for="synagogue">
-        Synagogue
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="venue-type" value="temple" id="temple">
-      <label class="form-check-label" for="temple">
-        Temple
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" value="other" id="other" name="venue-type">
-      <label class="form-check-label" for="other">Other (please specify):</label>
-    </div>
-    <input type="text" class="form-control w-50 mb-3" id="venue-description" name="venue-description">
-  
-  </div>
-
-  <p class="form-label">Venue Address*</p>
-    <div class="rounded-4 p-3" style="background: white; border: 1px solid #FFFFFF;">
-      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-street" name="venue-street" placeholder="Street name and number:">
-    <div class="row">
-      <div class="col-6">
-        <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-postal-code" name="venue-postal-code" placeholder="Postal Code:">
-      </div>
-      <div class="col-6">
-        <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-city" name="venue-city" placeholder="City:">
-      </div>
-    </div>
-    </div>
-
-<h3 class="mb-4 mt-5">Contact Details</h3>
-
-  <div class="mb-3">
-    <label for="venue-email" class="form-label">Email Address*</label>
-    <input type="email" class="form-control" id="venue-email">
-  </div>  
-
-  <div class="mb-3">
-    <label for="venue-telephone" class="form-label">Telephone Number*</label>
-    <input type="tel" class="form-control" id="venue-telephone" name="venue-telephone">
-  </div>  
-
-  <p class="form-label">Useful links</p>
-    <div class="rounded-4 p-3" style="background: white; border: 1px solid #FFFFFF;">
-      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-website" name="venue-website" placeholder="Website:">
-      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-instagram" name="venue-instagram" placeholder="Instagram:">
-      <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-facebook" name="venue-facebook" placeholder="Facebook:">
-    </div>
-
-<div class="text-end mt-4 mb-5">
-
-  <a
-    href="#"
-    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
-    >
-      Next →
-  </a>
-
 </div>
 
+<div class="form-section">
+
+  <h3 class="subheader">Venue Details</h3>
+
+  <label class="form-label">What is your venue name?*</label>
+  <input type="text" class="textbox" id="venue-name" name="venue-name" required>
+
+  <!-- I think required is only needed on one radio input because they all share the same name -->
+  <label class="form-label">Which prayer house or other location do you represent?*</label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="church" required>
+      <span class="pill">Church</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="mosque">
+      <span class="pill">Mosque</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="synagogue">
+      <span class="pill">Synagogue</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="temple">
+      <span class="pill">Temple</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="other">
+      <span class="pill">Other</span>
+    </label>
+  </div>
+  <input type="text" class="textbox" id="venue-description" name="venue-description" placeholder="If other, please specify">
+
+  <label class="form-label">Venue Address*</label>
+  <div class="grouped-inputs">
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Street:</span>
+      <input type="text" class="grouped-input-field" id="venue-street" name="venue-street">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Postal Code:</span>
+      <input type="text" class="grouped-input-field" id="venue-postal-code" name="venue-postal-code" required>
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">City:</span>
+      <input type="text" class="grouped-input-field" id="venue-city" name="venue-city">
+    </div>
+  </div>
+
+  <h3 class="subheader">Contact Details</h3>
+
+  <label class="form-label">Email Address*</label>
+  <input type="email" class="textbox" id="venue-email" name="venue-email" required>
+
+  <label class="form-label">Telephone Number*</label>
+  <input type="tel" class="textbox" id="venue-telephone" name="venue-telephone" required>
+
+  <label class="form-label">Useful links</label>
+  <div class="grouped-inputs">
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Website:</span>
+      <input type="text" class="grouped-input-field" id="venue-website" name="venue-website">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Instagram:</span>
+      <input type="text" class="grouped-input-field" id="venue-instagram" name="venue-instagram">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Facebook:</span>
+      <input type="text" class="grouped-input-field" id="venue-facebook" name="venue-facebook">
+    </div>
+  </div>
+
+  <div class="form-nav form-nav-one">
+    <button type="button" class="form-btn btn-next">Next →</button>
+  </div>
+
+</div>

@@ -1,0 +1,195 @@
+.form-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.form-title {
+  color: var(--spirit-red);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.subheader {
+  font-family: "Cormorant Garamond", serif;
+  color: #1E1E1E;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+/* progress bar */
+.progress-bar {
+  display: flex !important;
+  flex-direction: row !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.progress-line {
+  width: 80px;
+  height: 2px;
+  background-color: #525252;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #525252;
+}
+
+.progress-dot.active {
+  background-color: #525252;
+}
+
+.form-section {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-family: "Inter", sans-serif;
+  color: #1E1E1E;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Generic input boxes */
+.textbox {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1E1E1E;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+}
+
+/* Pill selector, any multiple choice */
+.pill-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.pill-option input[type="radio"],
+.pill-option input[type="checkbox"] {
+  display: none;
+}
+
+.pill-option input:checked + .pill {
+  background-color: #fde8e8;
+  border-color: var(--spirit-red);
+}
+
+.pill {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 999px;
+  border: 1px solid #d0c8c0;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1E1E1E;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.pill:hover {
+  background-color: #fde8e8;
+  border-color: var(--spirit-red);
+}
+
+/* Multiple input boxes, ie Social media links */
+.grouped-inputs {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 18px;
+  margin-bottom: 28px;
+}
+
+.grouped-input-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 25px;
+  background-color: #fde8e8;
+  margin-bottom: 8px;
+}
+
+.grouped-input-row:last-child {
+  margin-bottom: 0;
+}
+
+.grouped-input-label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: #1E1E1E;
+  min-width: unset;
+  margin-right: 4px;
+}
+
+.grouped-input-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1E1E1E;
+  outline: none;
+}
+
+/* Navigation buttons */
+.form-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 40px;
+}
+
+.form-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  margin-bottom: 40px;
+  margin-left: -60px;
+  margin-right: -60px;
+}
+/* Add this when you only have one button */
+.form-nav-one {
+  justify-content: flex-end;
+}
+
+.form-btn {
+  background-color: #1E1E1E;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #3a3a3a;
+}

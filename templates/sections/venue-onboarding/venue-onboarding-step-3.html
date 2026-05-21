@@ -1,101 +1,95 @@
-<section class="spirit-hero-top text-center px-3 py-4">
-
-    <h2 class="spirit-hero-title spirit-text-red mb-6">
-        Onboarding
-    </h2>
-
-  <img
-    src="{{ url_for('static', filename='img/global/progress-bar-step-3.png') }}"
-    alt="Step 3"
-    class="spirit-keyhole mb-2"
-    aria-hidden="true"
-    style="max-width: 600px;"
-  />
-
-</section>
-
-<h3>Desired Programming</h3>
-
-<div class="mb-3">
-<label for="venue-story" class="form-label">Tell the story of your venue.<br> 
-    Describe the atmosphere, history, community, mission, or character of your space.*</label>
-    <textarea class="form-control" id="venue-story" name="venue-story" rows="5" maxlength="1000"></textarea>
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+  </div>
 </div>
 
-<p class="form-label">Which forms of art, culture, or other programs suit you best?*
-    <br>Please select all that apply.  
-</p>
+<div class="form-section">
 
-<!-- to stack the buttons as a grid -->
-<div class="d-flex flex-wrap gap-2">
+  <h3 class="subheader">Desired Programming</h3>
 
-    <input type="checkbox" class="btn-check" id="theatre" name="program-theatre" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="theatre">Theatre</label>
+  <label class="form-label">Tell the story of your venue.<br>
+    Describe the atmosphere, history, community, mission, or character of your space.*
+  </label>
+  <textarea class="textbox" id="venue-story" name="venue-story" maxlength="1000"
+    style="height: auto; min-height: 130px;" required></textarea>
 
-    <input type="checkbox" class="btn-check" id="spoken-word" name="program-spoken-word" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="spoken-word">Spoken word</label>
+  <label class="form-label">Which forms of art, culture, or other programs suit you best?*<br>
+    Please select all that apply.
+  </label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="theatre">
+      <span class="pill">Theatre</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="spoken-word">
+      <span class="pill">Spoken word</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="music">
+      <span class="pill">Music/concerts</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="workshops">
+      <span class="pill">Workshops</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="silence-experiences">
+      <span class="pill">Silence experiences</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="rituals-ceremonies">
+      <span class="pill">Rituals/ceremonies</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="exhibitions">
+      <span class="pill">Exhibitions</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="light-art">
+      <span class="pill">Light art</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="movie-screenings">
+      <span class="pill">Movie screenings</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="dinner">
+      <span class="pill">Dinner</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="dance">
+      <span class="pill">Dance</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="program" value="other">
+      <span class="pill">Other</span>
+    </label>
+  </div>
+  <input type="text" class="textbox" id="program-description" name="program-description"
+    placeholder="Description if preferred">
 
-    <input type="checkbox" class="btn-check" id="music" name="program-music" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="music">Music/concerts</label>
+  <label class="form-label">Do you want to say something about the programming?
+    For example, about what is really <em>not</em> desired?
+  </label>
+  <textarea class="textbox" id="not-desired" name="not-desired" maxlength="250"
+    style="height: auto; min-height: 130px;"></textarea>
 
-    <input type="checkbox" class="btn-check" id="workshops" name="program-workshops" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="workshops">Workshops</label>
+  <label class="form-label">What would you like prospective makers to know about your location?*</label>
+  <textarea class="textbox" id="info-for-makers" name="info-for-makers" maxlength="250"
+    style="height: auto; min-height: 130px;" required></textarea>
 
-    <input type="checkbox" class="btn-check" id="silence-experiences" name="program-silence-experiences" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="silence-experiences">Silence experiences</label>
-
-    <input type="checkbox" class="btn-check" id="rituals-ceremonies" name="program-rituals-ceremonies" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="rituals-ceremonies">Rituals/ceremonies</label>
-
-    <input type="checkbox" class="btn-check" id="exhibitions" name="program-exhibitions" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="exhibitions">Exhibitions</label>
-
-    <input type="checkbox" class="btn-check" id="light-art" name="program-light-art" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="light-art">Light art</label>
-
-    <input type="checkbox" class="btn-check" id="movie-screenings" name="program-movie-screenings" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="movie-screenings">Movie screenings</label>
-
-    <input type="checkbox" class="btn-check" id="dinner" name="program-dinner" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="dinner">Dinner</label>
-
-    <input type="checkbox" class="btn-check" id="dance" name="program-dance" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="dance">Dance</label>
-
-    <input type="checkbox" class="btn-check" id="other" name="program-other" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="other">Other</label>
-
-</div>
-<div class="mb-3">
-    <label for="program-description" class="form-label">Description if preferred:</label>
-    <input type="text" class="form-control" id="program-description" name="program-description">
-</div>
-
-<div class="mb-3">
-<label for="not-desired" class="form-label">Do you want to say something about the programming? 
-    For example, about what is really <em>not</em> desired?*</label>
-    <textarea class="form-control" id="not-desired" name="not-desired" rows="5" maxlength="250"></textarea>
-</div>
-
-<div class="mb-3">
-<label for="info-for-makers" class="form-label">What would you like prospective makers to know about your location?*</label>
-    <textarea class="form-control" id="info-for-makers" name="info-for-makers" rows="5" maxlength="250"></textarea>
-</div>
-
-<div class="d-flex justify-content-between mt-4 mb-5">
-
-    <a
-    href="#"
-    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-back"
-    >
-    ← Back
-    </a>
-
-  <a
-    href="#"
-    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
-    >
-      Next →
-  </a>
+  <div class="form-nav">
+    <button type="button" class="form-btn btn-back">← Back</button>
+    <button type="button" class="form-btn btn-next">Next →</button>
+  </div>
 
 </div>

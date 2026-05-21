@@ -1,116 +1,74 @@
-<section class="spirit-hero-top text-center px-3 py-4">
-
-    <h2 class="spirit-hero-title spirit-text-red mb-6">
-        Onboarding
-    </h2>
-
-  <img
-    src="{{ url_for('static', filename='img/global/progress-bar-step-2.png') }}"
-    alt="Step 2"
-    class="spirit-keyhole mb-2"
-    aria-hidden="true"
-    style="max-width: 600px;"
-  />
-
-</section>
-
-<h3 class="mb-4">Practical Information</h3>
-
-<div class="mb-3">
-
-    <label class="form-label">What is the capacity (number of possible visitors) of your location?*</label>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" value="5-20" id="capacity-5-20">
-        <label class="form-check-label" for="capacity-5-20">
-            5-20 people
-        </label>
-      </div>
-
-        <div class="form-check">
-      <input class="form-check-input" type="radio" value="20-50" id="capacity-20-50">
-      <label class="form-check-label" for="capacity-20-50">
-        20-50 people
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" value="50-100" id="capacity-50-100">
-      <label class="form-check-label" for="capacity-50-100">
-        50-100 people
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="radio" value="100" id="capacity-100">
-      <label class="form-check-label" for="capacity-100">
-        100+ people
-      </label>
-    </div>
-
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
   </div>
+</div>
 
-<div class="mb-3">
+<div class="form-section">
 
-    <label class="form-label">What are the accessibility provisions at your location?*<br>
-        Please select all that apply.  
+  <h3 class="subheader">Practical Information</h3>
+
+  <label class="form-label">What is the capacity (number of possible visitors) of your location?*</label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="5-20" required>
+      <span class="pill">5–20 people</span>
     </label>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="step-free-access" id="step-free-access">
-        <label class="form-check-label" for="step-free-access">
-            Step-free access
-        </label>
-      </div>
-
-        <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="accessible-toilets" id="accessible-toilets">
-      <label class="form-check-label" for="accessible-toilets">
-        Accessible toilets
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="clear-circulation-routes" id="clear-circulation-routes">
-      <label class="form-check-label" for="clear-circulation-routes">
-        Clear circulation routes
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="accessible-parking" id="accessible-parking">
-      <label class="form-check-label" for="accessible-parking">
-        Accessible parking
-      </label>
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="other-accessibility" id="other-accessibility">
-      <label class="form-check-label" for="other-accessibility">
-        Other (please specify):
-      </label>
-      <input type ="text" class="form-control mt-2" id="other-accessibility-specify">
-    </div>
-
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="20-50">
+      <span class="pill">20–50 people</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="50-100">
+      <span class="pill">50–100 people</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="100+">
+      <span class="pill">100+ people</span>
+    </label>
   </div>
 
-    <div class="mb-3">
-        <label for="venue-price" class="form-label">What is your location's price (per hour) for use?*</label>
-        <input type="number" class="form-control" id="venue-price">
-    </div>
+  <label class="form-label">What are the accessibility provisions at your location?<br>
+    Please select all that apply.
+  </label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="step-free-access">
+      <span class="pill">Step-free access</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="accessible-toilets">
+      <span class="pill">Accessible toilets</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="clear-circulation-routes">
+      <span class="pill">Clear circulation routes</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="accessible-parking">
+      <span class="pill">Accessible parking</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="other">
+      <span class="pill">Other</span>
+    </label>
+  </div>
+  <input type="text" class="textbox" id="other-accessibility-specify" placeholder="If other, please specify">
 
-<div class="d-flex justify-content-between mt-4 mb-5">
+  <label class="form-label">What is your location's price (per hour) for use?*</label>
+  <input type="number" class="textbox" id="venue-price" name="venue-price" required>
 
-    <a
-    href="#"
-    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-back"
-    >
-    ← Back
-    </a>
-
-  <a
-    href="#"
-    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
-    >
-      Next →
-  </a>
+  <div class="form-nav">
+    <button type="button" class="form-btn btn-back">← Back</button>
+    <button type="button" class="form-btn btn-next">Next →</button>
+  </div>
 
 </div>
+
