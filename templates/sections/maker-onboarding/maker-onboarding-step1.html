@@ -1,0 +1,75 @@
+<!-- Header -->
+<section class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+
+<!-- Progress bar -->
+  <div class="progress-bar">
+    <span class="progress-line"></span>
+    <span class="progress-dot active"></span>
+    <span class="progress-line"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-line"></span>
+  </div>
+</section>
+
+<!-- Subheader -->
+<section class="form-section">
+  <h2 class="subheader">Details</h2>
+
+<!-- Name -->
+  <label for="artist-name" class="form-label">What is your artist name?*</label>
+  <input type="text" id="artist-name" name="artist_name" class="textbox" required>
+
+<!-- Phone number -->
+  <label for="phone-number" class="form-label">Phone Number*</label>
+  <input type="tel" id="maker-phone-number" name="phone_number" class="textbox" required>
+
+<!-- Gender -->
+<div class="form-group">
+<label class="form-label">Gender*</label>
+  <div class="pill-options">
+    <label class="pill-option"><input type="radio" name="gender" value="male" required /><span class="pill">Male</span></label>
+    
+    <label class="pill-option"><input type="radio" name="gender" value="female" /><span class="pill">Female</span></label>
+    
+    <label class="pill-option"><input type="radio" name="gender" value="non-binary" /><span class="pill">Non-Binary</span></label>
+    
+    <label class="pill-option"><input type="radio" name="gender" value="other" /><span class="pill">Other</span></label>
+  </div>
+</div>
+
+<!-- Website -->
+<div class="form-group">
+  <label class="form-label" for="website">Website</label>
+  <input class="textbox" type="url" id="maker-website" name="website" />
+</div>
+
+<!-- Social media -->
+<div class="form-group">
+  <label class="form-label">Social media ID's</label>
+  <div class="grouped-inputs">
+
+    <div class="grouped-input-row">
+      <label class="grouped-input-label" for="instagram">Instagram:</label>
+      <input class="grouped-input-field" type="text" id="maker-instagram" name="instagram" />
+    </div>
+
+    <div class="grouped-input-row">
+      <label class="grouped-input-label" for="linkedin">LinkedIn:</label>
+      <input class="grouped-input-field" type="text" id="maker-linkedin" name="linkedin" />
+    </div>
+
+    <div class="grouped-input-row">
+      <label class="grouped-input-label" for="tiktok">TikTok:</label>
+      <input class="grouped-input-field" type="text" id="maker-tiktok" name="tiktok" />
+    </div>
+
+  </div>
+</div>
+
+<!-- Navigation button -->
+<div class="form-nav form-nav-one">
+  <button class="form-btn">Next</button>
+</div>
+
+</section>
