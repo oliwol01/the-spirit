@@ -1,0 +1,65 @@
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+  </div>
+</div>
+
+<div class="form-section">
+
+  <h3 class="subheader">Venue Photos</h3>
+
+  <p>Photos help makers understand the atmosphere and possibilities of your space.<br>
+    You can upload up to 4 photos.</p>
+
+  <label class="form-label">Cover photo*</label>
+  <label for="cover-photo" style="display: flex; flex-direction: column; align-items: center;
+    justify-content: center; width: 100%; padding: 32px; border-radius: 18px; text-align: center;
+    border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+    <i class="bi bi-image fs-3 text-secondary"></i>
+    <strong style="margin-top: 8px;">Upload cover photo</strong>
+    <small style="color: #888;">JPG or PNG, max 10MB<br>Recommended: 16:9 landscape</small>
+    <input type="file" id="cover-photo" style="display: none;" accept=".jpg,.png">
+  </label>
+
+  <label class="form-label" style="margin-top: 28px;">Additional photos (optional)</label>
+  <div style="display: flex; gap: 12px;">
+
+    <label for="additional-photo-1" style="display: flex; flex-direction: column; align-items: center;
+      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
+      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+      <i class="bi bi-plus fs-3 text-secondary"></i>
+      <strong style="margin-top: 8px;">Add photo</strong>
+      <input type="file" id="additional-photo-1" style="display: none;" accept=".jpg,.png">
+    </label>
+
+    <label for="additional-photo-2" style="display: flex; flex-direction: column; align-items: center;
+      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
+      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+      <i class="bi bi-plus fs-3 text-secondary"></i>
+      <strong style="margin-top: 8px;">Add photo</strong>
+      <input type="file" id="additional-photo-2" style="display: none;" accept=".jpg,.png">
+    </label>
+
+    <label for="additional-photo-3" style="display: flex; flex-direction: column; align-items: center;
+      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
+      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+      <i class="bi bi-plus fs-3 text-secondary"></i>
+      <strong style="margin-top: 8px;">Add photo</strong>
+      <input type="file" id="additional-photo-3" style="display: none;" accept=".jpg,.png">
+    </label>
+
+  </div>
+
+  <div class="form-nav">
+    <button type="button" class="form-btn btn-back">← Back</button>
+    <button type="submit" class="form-btn">Submit</button>
+  </div>
+
+</div>

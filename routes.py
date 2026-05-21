@@ -51,3 +51,7 @@ def init_routes(app):
         return render_template(
             "maker-onboarding.html"
         )
+    
+    @app.route("/venue-onboarding")
+    def venue_onboarding():
+        return render_template("venue-onboarding.html")

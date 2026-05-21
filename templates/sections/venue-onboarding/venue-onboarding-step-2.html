@@ -1,0 +1,74 @@
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+  </div>
+</div>
+
+<div class="form-section">
+
+  <h3 class="subheader">Practical Information</h3>
+
+  <label class="form-label">What is the capacity (number of possible visitors) of your location?*</label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="5-20" required>
+      <span class="pill">5–20 people</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="20-50">
+      <span class="pill">20–50 people</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="50-100">
+      <span class="pill">50–100 people</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="capacity" value="100+">
+      <span class="pill">100+ people</span>
+    </label>
+  </div>
+
+  <label class="form-label">What are the accessibility provisions at your location?<br>
+    Please select all that apply.
+  </label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="step-free-access">
+      <span class="pill">Step-free access</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="accessible-toilets">
+      <span class="pill">Accessible toilets</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="clear-circulation-routes">
+      <span class="pill">Clear circulation routes</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="accessible-parking">
+      <span class="pill">Accessible parking</span>
+    </label>
+    <label class="pill-option">
+      <input type="checkbox" name="accessibility" value="other">
+      <span class="pill">Other</span>
+    </label>
+  </div>
+  <input type="text" class="textbox" id="other-accessibility-specify" placeholder="If other, please specify">
+
+  <label class="form-label">What is your location's price (per hour) for use?*</label>
+  <input type="number" class="textbox" id="venue-price" name="venue-price" required>
+
+  <div class="form-nav">
+    <button type="button" class="form-btn btn-back">← Back</button>
+    <button type="button" class="form-btn btn-next">Next →</button>
+  </div>
+
+</div>
+
