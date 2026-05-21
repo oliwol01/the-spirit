@@ -159,14 +159,6 @@
 /* Navigation buttons */
 .form-nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 28px;
-  margin-bottom: 40px;
-}
-
-.form-nav {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 28px;
@@ -179,7 +171,9 @@
   justify-content: flex-end;
 }
 
-.form-btn {
+.btn-next,
+.btn-back,
+.btn-submit {
   background-color: #1E1E1E;
   color: #ffffff;
   border: none;
@@ -190,6 +184,8 @@
   cursor: pointer;
 }
 
-.form-btn:hover {
+.btn-next:hover,
+.btn-back:hover,
+.btn-submit:hover {
   background-color: #3a3a3a;
 }
