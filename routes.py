@@ -44,3 +44,10 @@ def init_routes(app):
             "index.html",
             venues=venues
         )
+
+    @app.route("/maker-onboarding")
+    def maker_onboarding():
+
+        return render_template(
+            "maker-onboarding.html"
+        )
