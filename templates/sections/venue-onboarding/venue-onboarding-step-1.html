@@ -1,6 +1,6 @@
 <section class="spirit-hero-top text-center px-3 py-4">
 
-    <h2 class="spirit-hero-title spirit-text-red mb-6">
+    <h2 class="spirit-hero-title spirit-text-red mb-5">
         Onboarding
     </h2>
 
@@ -9,59 +9,75 @@
     alt="Step 1"
     class="spirit-keyhole mb-2"
     aria-hidden="true"
+    style="max-width: 600px;"
   />
-<!-- potentially h3 heading for 'details' -->
+
 </section>
 
-<form>
+<h3 class="mb-4">Venue Details</h3>
 
 <!-- check standard for label vs id -->
 <!-- check if can only choose one - this is a radio button I think? -->
-<!-- check if I need to include a name after type for the db -->
 <!-- check how to force answers -->
 
   <div class="mb-3">
-    <label for="venue-name" class="form-label">What is your name?*</label>
-    <input type="text" class="form-control" id="venue-name">
+    <label for="venue-name" class="form-label">What is your venue name?*</label>
+    <input type="text" class="form-control" id="venue-name" name="venue-name">
   </div>
 
   <div class="mb-3">
 
     <label class="form-label">Which prayer house or other location do you represent?*</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" value="church" id="church">
+        <input class="form-check-input" type="radio" name="venue-type" value="church" id="church">
         <label class="form-check-label" for="church">
             Church
         </label>
       </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" value="mosque" id="mosque">
+      <input class="form-check-input" type="radio" name="venue-type" value="mosque" id="mosque">
       <label class="form-check-label" for="mosque">
         Mosque
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" value="synagogue" id="synagogue">
+      <input class="form-check-input" type="radio" name="venue-type" value="synagogue" id="synagogue">
       <label class="form-check-label" for="synagogue">
         Synagogue
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" value="temple" id="temple">
+      <input class="form-check-input" type="radio" name="venue-type" value="temple" id="temple">
       <label class="form-check-label" for="temple">
         Temple
       </label>
     </div>
 
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="other" id="other" name="venue-type">
+      <label class="form-check-label" for="other">Other (please specify):</label>
+    </div>
+    <input type="text" class="form-control w-50 mb-3" id="venue-description" name="venue-description">
+  
   </div>
 
-  <div class="mb-3">
-    <label for="venue-description" class="form-label">Description if preferred:</label>
-    <input type="text" class="form-control" id="venue-description">
-  </div>
+  <p class="form-label">Venue Address*</p>
+    <div class="rounded-4 p-3" style="background: white; border: 1px solid #FFFFFF;">
+      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-street" name="venue-street" placeholder="Street name and number:">
+    <div class="row">
+      <div class="col-6">
+        <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-postal-code" name="venue-postal-code" placeholder="Postal Code:">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-city" name="venue-city" placeholder="City:">
+      </div>
+    </div>
+    </div>
+
+<h3 class="mb-4 mt-5">Contact Details</h3>
 
   <div class="mb-3">
     <label for="venue-email" class="form-label">Email Address*</label>
@@ -70,17 +86,24 @@
 
   <div class="mb-3">
     <label for="venue-telephone" class="form-label">Telephone Number*</label>
-    <input type="tel" class="form-control" id="venue-telephone">
+    <input type="tel" class="form-control" id="venue-telephone" name="venue-telephone">
   </div>  
 
-  <div class="text-end">
+  <p class="form-label">Useful links</p>
+    <div class="rounded-4 p-3" style="background: white; border: 1px solid #FFFFFF;">
+      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-website" name="venue-website" placeholder="Website:">
+      <input type="text" class="form-control border-0 mb-2" style="background: #FDEFEF;" id="venue-instagram" name="venue-instagram" placeholder="Instagram:">
+      <input type="text" class="form-control border-0" style="background: #FDEFEF;" id="venue-facebook" name="venue-facebook" placeholder="Facebook:">
+    </div>
 
-    <a
-      href="#"
-      class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
+<div class="text-end mt-4 mb-5">
+
+  <a
+    href="#"
+    class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
     >
       Next →
-    </a>
+  </a>
 
-  </div>
+</div>
 

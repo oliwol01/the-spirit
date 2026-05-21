@@ -9,74 +9,95 @@
     alt="Step 2"
     class="spirit-keyhole mb-2"
     aria-hidden="true"
+    style="max-width: 600px;"
   />
-<!-- potentially h3 heading for 'Desired Programming' -->
-<!-- check about expanding text boxes for more writing -->
 
 </section>
 
-<p class="form-label">Which forms of art, culture, or other programs suit you best?*
-    <br>Please select all that apply.  
-</p>
-
-<!-- to stack the buttons as a grid -->
-<div class="d-flex flex-wrap gap-2">
-
-    <input type="checkbox" class="btn-check" id="theatre" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="theatre">Theatre</label>
-
-    <input type="checkbox" class="btn-check" id="spoken-word" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="spoken-word">Spoken word</label>
-
-    <input type="checkbox" class="btn-check" id="music" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="music">Music/concerts</label>
-
-    <input type="checkbox" class="btn-check" id="workshops" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="workshops">Workshops</label>
-
-    <input type="checkbox" class="btn-check" id="silence-experiences" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="silence-experiences">Silence experiences</label>
-
-    <input type="checkbox" class="btn-check" id="rituals-ceremonies" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="rituals-ceremonies">Rituals/ceremonies</label>
-
-    <input type="checkbox" class="btn-check" id="exhibitions" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="exhibitions">Exhibitions</label>
-
-    <input type="checkbox" class="btn-check" id="light-art" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="light-art">Light art</label>
-
-    <input type="checkbox" class="btn-check" id="movie-screenings" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="movie-screenings">Movie screenings</label>
-
-    <input type="checkbox" class="btn-check" id="dinner" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="dinner">Dinner</label>
-
-    <input type="checkbox" class="btn-check" id="dance" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="dance">Dance</label>
-
-    <input type="checkbox" class="btn-check" id="other" autocomplete="off">
-    <label class="btn spirit-btn-outline-red" for="other">Other</label>
-
-        <div class="mb-3">
-            <label for="venue-description" class="form-label">Description if preferred:</label>
-            <input type="text" class="form-control" id="venue-description">
-        </div>
-
-</div>
+<h3 class="mb-4">Practical Information</h3>
 
 <div class="mb-3">
-<label for="not-desired" class="form-label">Do you want to say something about the programming? 
-    For example, about what is really <em>not</em> desired?*</label>
-    <input type="text" class="form-control" id="not-desired">
-</div>
+
+    <label class="form-label">What is the capacity (number of possible visitors) of your location?*</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="5-20" id="capacity-5-20">
+        <label class="form-check-label" for="capacity-5-20">
+            5-20 people
+        </label>
+      </div>
+
+        <div class="form-check">
+      <input class="form-check-input" type="radio" value="20-50" id="capacity-20-50">
+      <label class="form-check-label" for="capacity-20-50">
+        20-50 people
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="50-100" id="capacity-50-100">
+      <label class="form-check-label" for="capacity-50-100">
+        50-100 people
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="100" id="capacity-100">
+      <label class="form-check-label" for="capacity-100">
+        100+ people
+      </label>
+    </div>
+
+  </div>
 
 <div class="mb-3">
-<label for="info-for-makers" class="form-label">What would you like prospective makers to know about your location?*</label>
-    <input type="text" class="form-control" id="info-for-makers">
-</div>
 
-<div class="d-flex justify-content-between">
+    <label class="form-label">What are the accessibility provisions at your location?*<br>
+        Please select all that apply.  
+    </label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="step-free-access" id="step-free-access">
+        <label class="form-check-label" for="step-free-access">
+            Step-free access
+        </label>
+      </div>
+
+        <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="accessible-toilets" id="accessible-toilets">
+      <label class="form-check-label" for="accessible-toilets">
+        Accessible toilets
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="clear-circulation-routes" id="clear-circulation-routes">
+      <label class="form-check-label" for="clear-circulation-routes">
+        Clear circulation routes
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="accessible-parking" id="accessible-parking">
+      <label class="form-check-label" for="accessible-parking">
+        Accessible parking
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="other-accessibility" id="other-accessibility">
+      <label class="form-check-label" for="other-accessibility">
+        Other (please specify):
+      </label>
+      <input type ="text" class="form-control mt-2" id="other-accessibility-specify">
+    </div>
+
+  </div>
+
+    <div class="mb-3">
+        <label for="venue-price" class="form-label">What is your location's price (per hour) for use?*</label>
+        <input type="number" class="form-control" id="venue-price">
+    </div>
+
+<div class="d-flex justify-content-between mt-4 mb-5">
 
     <a
     href="#"
@@ -85,15 +106,11 @@
     ← Back
     </a>
 
-</div>
-
-<div class="text-end">
-
-    <a
+  <a
     href="#"
     class="btn spirit-btn-red rounded-3 px-4 py-2 btn-next"
     >
-    Next →
-    </a>
+      Next →
+  </a>
 
 </div>
