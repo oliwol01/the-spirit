@@ -6,7 +6,6 @@ def init_routes(app):
     @app.route("/")
     def home():
 
-
         venues = [
             {
                 "name": "Apostolisch Genootschap",
@@ -44,3 +43,8 @@ def init_routes(app):
             "index.html",
             venues=venues
         )
+
+    @app.route("/proposal-form")
+    def proposal_form():
+        return render_template("proposal-form.html")
+    
