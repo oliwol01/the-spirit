@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Venue Profile – The Spirit{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/venue_profile.css') }}" />
+{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+
+  <div class="form-header">
+    <h1 class="form-title">Venue Profile</h1>
+  </div>
+
+  <div class="profile-card">
+
+    <div class="profile-sidebar">
+      <a href="#" class="sidebar-link active" data-section="details">Details</a>
+      <a href="#" class="sidebar-link" data-section="description">Description</a>
+      <a href="#" class="sidebar-link" data-section="pictures">Pictures</a>
+    </div>
+
+    <div class="profile-content">
+
+      <div class="profile-section" id="section-details">
+        <p class="subheader">Details</p>
+        <div class="form-section">
+          <label class="form-label">Name</label>
+          <input type="text" class="textbox" />
+          <label class="form-label">Address</label>
+          <input type="text" class="textbox" />
+          <label class="form-label">Telephone number</label>
+          <input type="tel" class="textbox" />
+          <label class="form-label">Contact details</label>
+          <div class="grouped-inputs">
+            <div class="grouped-input-row">
+              <span class="grouped-input-label">Email:</span>
+              <input type="email" class="grouped-input-field"  />
+            </div>
+            <div class="grouped-input-row">
+              <span class="grouped-input-label">Website:</span>
+              <input type="url" class="grouped-input-field" />
+            </div>
+            <div class="grouped-input-row">
+              <span class="grouped-input-label">Instagram:</span>
+              <input type="url" class="grouped-input-field" />
+            </div>
+            <div class="grouped-input-row">
+              <span class="grouped-input-label">Facebook:</span>
+              <input type="url" class="grouped-input-field"  />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-section" id="section-description" style="display:none;">
+        <p class="subheader">Description</p>
+        <div class="form-section">
+          <label class="form-label">Your story as a holy space</label>
+          <textarea class="textbox story-input"></textarea>
+          <label class="form-label">Which forms of art, culture or other programs suit you best? Please tick all that apply</label>
+          <div class="pill-options">
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Theatre</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Spoken word</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Music/concerts</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Workshops</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Silence experiences</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Rituals & ceremonies</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Exhibitions</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Other</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Light art</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Movie screenings</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Dinners</span></label>
+            <label class="pill-option"><input type="checkbox" /><span class="pill">Dance</span></label>
+          </div>
+          <label class="form-label">Message to Makers</label>
+          <textarea class="textbox message-input"></textarea>
+        </div>
+      </div>
+
+      <div class="profile-section" id="section-pictures" style="display:none;">
+        <p class="subheader">Pictures</p>
+        <div class="form-section">
+          <label class="form-label">Cover photo</label>
+          <div class="upload-cover">
+            <i class="bi bi-image"></i>
+            <span>Click to upload</span>
+          </div>
+          <label class="form-label mt-4">Additional photos</label>
+          <div class="upload-grid">
+            <div class="upload-photo"><i class="bi bi-upload"></i></div>
+            <div class="upload-photo"><i class="bi bi-upload"></i></div>
+            <div class="upload-photo"><i class="bi bi-upload"></i></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  document.addEventListener('click', function(e) {
+  if (e.target.matches('.sidebar-link')) {
+    e.preventDefault();
+    const name = e.target.dataset.section;
+    document.querySelectorAll('.profile-section').forEach(s => s.style.display = 'none');
+    document.getElementById('section-' + name).style.display = 'block';
+    document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('active'));
+    e.target.classList.add('active');
+  }
+});
+</script>
+{% endblock %}
