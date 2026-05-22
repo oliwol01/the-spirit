@@ -1,14 +1,14 @@
 <section class="container py-4">
 
   <h2 class="text-center fw-normal fs-3 mb-4">
-    Explore spaces open to collaboration
+    What collaboration can look like
   </h2>
 
-  <div class="row row-cols-auto g-3 mb-4 justify-content-center">
+<div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+    
+    {% for event in events %}
 
-    {% for venue in venues %}
-
-      {% include "components/venue-card.html" %}
+      {% include "components/event-card.html" %}
 
     {% endfor %}
 
@@ -17,7 +17,7 @@
   <div class="text-end">
 
     <a
-      href="{{ url_for('locations') }}"
+      href="https://thespirit.amsterdam/app/map/"
       class="btn spirit-btn-red rounded-3 px-4 py-2"
     >
       See more →

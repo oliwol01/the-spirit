@@ -1,0 +1,47 @@
+<a
+  href="{{ event.link }}"
+  target="_blank"
+  class="text-decoration-none d-block"
+>
+
+  <div class="spirit-venue-card">
+
+    <img
+      src="{{ url_for('static', filename=event.image) }}"
+      alt="{{ event.title }}"
+      class="img-fluid w-100 spirit-venue-image mb-3"
+    />
+
+    <div class="d-flex flex-wrap gap-2 mb-3">
+
+      {% for tag in event.tags.split(',') %}
+
+        <span class="badge rounded-pill text-bg-light fw-normal px-3 py-2">
+
+          {{ tag.strip() }}
+
+        </span>
+
+      {% endfor %}
+
+    </div>
+
+    <h3 class="fs-3 fw-normal spirit-text-red lh-1 mb-3 spirit-hero-subtitle">
+
+      {{ event.title }}
+
+    </h3>
+
+    <div class="d-flex align-items-center gap-2 fs-6 spirit-text-red">
+
+      <span>
+
+        {{ event.location }}
+
+      </span>
+
+    </div>
+
+  </div>
+
+</a>

@@ -46,7 +46,7 @@
         <div>
 
           <a
-            href="#"
+          href="{{ url_for('register', role='maker') }}"
             class="btn spirit-btn-outline-red rounded-pill px-4 py-2"
           >
             JOIN AS A MAKER
@@ -63,7 +63,7 @@
         <img
           src="{{ url_for('static', filename='img/home/makers-hp.png') }}"
           alt="Creative makers gathering"
-          class="img-fluid w-75 d-block ms-auto spirit-makers-image"
+          class="img-fluid d-block ms-auto spirit-makers-image"
         />
 
       </div>

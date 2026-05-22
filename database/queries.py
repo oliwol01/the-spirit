@@ -62,3 +62,24 @@ def get_venue_by_id(venue_id):
     connection.close()
 
     return venue
+
+
+
+def get_all_events():
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM events
+        """
+    )
+
+    events = cursor.fetchall()
+
+    connection.close()
+
+    return events

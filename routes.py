@@ -3,7 +3,8 @@ from werkzeug.security import generate_password_hash
 from database.queries import (
     create_user,
     get_all_venues,
-    get_venue_by_id
+    get_venue_by_id,
+    get_all_events
 )
 
 
@@ -14,9 +15,12 @@ def init_routes(app):
 
         venues = [dict(venue) for venue in get_all_venues()[:6]]
 
+        events = [dict(event) for event in get_all_events()[:6]]
+
         return render_template(
             "index.html",
-            venues=venues
+            venues=venues,
+            events=events
         )
 
     @app.route("/login")
@@ -66,9 +70,12 @@ def init_routes(app):
 
         venue = dict(get_venue_by_id(venue_id))
 
+        events = [dict(event) for event in get_all_events()]
+
         return render_template(
             "venue.html",
-            venue=venue
+            venue=venue,
+            events=events
         )
     @app.route("/maker-onboarding")
     def maker_onboarding():

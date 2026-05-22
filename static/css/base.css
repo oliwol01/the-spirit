@@ -87,7 +87,7 @@ body {
   object-fit: cover;
 
   border-radius: 1rem;
-
+}
 .btn-check:checked + .spirit-btn-outline-red {
   background: var(--spirit-red);
   color: white;

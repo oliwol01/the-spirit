@@ -18,3 +18,9 @@ Locations
     {% include "sections/locations/locations-overview.html" %}
 
 {% endblock %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/locations.js') }}"></script>
+
+{% endblock %}
