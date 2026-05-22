@@ -1,0 +1,57 @@
+.stats-bar {
+  background: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 2rem calc(50vw - 50%);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  padding: 1rem 0;
+}
+
+.stat-middle {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.stat-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--spirit-red);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.manage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 175px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8e3dd;
+  transition: box-shadow 0.15s;
+}
+
+.manage-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.manage-card-icon {
+  font-size: 2.2rem;
+  color: var(--spirit-red);
+}
+
+@media (max-width: 767px) {
+  .stat-middle {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+}
