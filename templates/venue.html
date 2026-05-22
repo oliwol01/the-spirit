@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Locations
+{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/venue.css') }}"
+>
+{% endblock %}
+
+{% block content %}
+
+    {% include "sections/venue/venue-hero.html" %}
+    {% include "sections/venue/venue-overview.html" %}
+    {% include "sections/venue/venue-details.html" %}
+    {% include "sections/venue/venue-cta.html" %}
+
+{% endblock %}

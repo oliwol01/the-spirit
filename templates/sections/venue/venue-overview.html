@@ -1,0 +1,46 @@
+<section id="venue-overview" class="pb-5">
+
+  <div class="container">
+
+    <div class="row g-5 align-items-start">
+
+      <!-- LEFT CONTENT -->
+
+      <div class="col-lg-8">
+
+        <h1 class="display-3 spirit-text-red spirit-hero-subtitle mb-4">
+          {{ venue.name }}
+        </h1>
+
+        <p class="fs-5 fw-light mb-0 venue-description">
+          {{ venue.description }}
+        </p>
+
+      </div>
+
+      <!-- MAKER MESSAGE -->
+
+      <div class="col-lg-4 d-flex justify-content-lg-end pt-lg-5">
+
+        <div class="venue-maker-message position-relative p-5 ">
+
+          <div class="venue-maker-border-top"></div>
+          <div class="venue-maker-border-bottom"></div>
+
+          <h3 class="fs-4 mb-4 venue-maker-heading">
+            Dear Maker,
+          </h3>
+
+          <p class="fst-italic mb-0 venue-maker-text">
+            “{{ venue.maker_message }}”
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -6,3 +6,24 @@
   height: 520px;
 
 }
+.filter-btn {
+  border: 1px solid #f0ddd4;
+  color: #8c1f1a;
+  background: transparent;
+}
+
+.filter-btn:hover {
+  border-color: #E30613;
+  color: #E30613;
+  background: rgba(227, 6, 19, 0.03);
+}
+
+.active-filter-btn {
+  background: #E30613;
+  color: white;
+}
+
+.active-filter-btn:hover {
+  background: #c80511;
+  color: white;
+}

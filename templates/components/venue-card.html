@@ -1,21 +1,28 @@
-<div class="col-auto px-1 spirit-venue-card">
+<div class="col-12 col-sm-6 col-lg-4">
 
-  <div>
+  <a
+    href="{{ url_for('venue', venue_id=venue.venue_id) }}"
+    class="text-decoration-none d-block"
+  >
 
-    <img
-      src="{{ url_for('static', filename=venue.image) }}"
-      alt="{{ venue.name }}"
-      class="img-fluid rounded-3 mb-2"
-    >
+    <div class="spirit-venue-card">
 
-    <h3 class="fs-4 fw-normal spirit-text-red spirit-hero-subtitle lh-1 mb-1">
-      {{ venue.name }}
-    </h3>
+      <img
+        src="{{ url_for('static', filename=venue.cover_image) }}"
+        alt="{{ venue.name }}"
+        class="img-fluid w-100 spirit-venue-image mb-3"
+      />
 
-    <span class="badge rounded-pill text-bg-light fw-normal px-3 py-1">
-      {{ venue.type }}
-    </span>
+      <h3 class="fs-3 fw-normal spirit-text-red lh-1 mb-2 spirit-hero-subtitle">
+        {{ venue.name }}
+      </h3>
 
-  </div>
+      <span class="badge rounded-pill text-bg-light fw-normal px-3 py-2">
+        {{ venue.venue_type }}
+      </span>
+
+    </div>
+
+  </a>
 
 </div>

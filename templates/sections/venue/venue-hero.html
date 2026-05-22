@@ -1,0 +1,84 @@
+
+
+<section id="venue-hero" class="pb-5">
+
+  <div class="container-fluid px-0">
+
+    <div
+      id="venueHeroCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+
+      <!-- INDICATORS -->
+
+      <div class="carousel-indicators">
+
+        {% set gallery_images = [venue.cover_image] + venue.images.split(',') %}
+
+        {% for image in gallery_images %}
+
+          <button
+            type="button"
+            data-bs-target="#venueHeroCarousel"
+            data-bs-slide-to="{{ loop.index0 }}"
+            class="{% if loop.first %}active{% endif %}"
+            {% if loop.first %}aria-current="true"{% endif %}
+            aria-label="Slide {{ loop.index }}"
+          ></button>
+
+        {% endfor %}
+
+      </div>
+
+      <!-- SLIDES -->
+
+      <div class="carousel-inner">
+
+        {% for image in gallery_images %}
+
+          <div class="carousel-item {% if loop.first %}active{% endif %}">
+
+            <img
+              src="{{ url_for('static', filename=image.strip()) }}"
+              class="d-block w-100 venue-hero-image"
+              alt="{{ venue.name }}"
+            >
+
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+      <!-- PREVIOUS -->
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#venueHeroCarousel"
+        data-bs-slide="prev"
+      >
+
+        <span class="carousel-control-prev-icon"></span>
+
+      </button>
+
+      <!-- NEXT -->
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#venueHeroCarousel"
+        data-bs-slide="next"
+      >
+
+        <span class="carousel-control-next-icon"></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,6 +1,10 @@
 from flask import render_template, request
 from werkzeug.security import generate_password_hash
-from database.queries import create_user, get_all_venues
+from database.queries import (
+    create_user,
+    get_all_venues,
+    get_venue_by_id
+)
 
 
 def init_routes(app):
@@ -8,39 +12,7 @@ def init_routes(app):
     @app.route("/")
     def home():
 
-
-        venues = [
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            },
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            },
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            },
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            },
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            },
-            {
-                "name": "Apostolisch Genootschap",
-                "type": "Church",
-                "image": "img/home/venue-1.png"
-            }
-        ]
+        venues = [dict(venue) for venue in get_all_venues()[:6]]
 
         return render_template(
             "index.html",
@@ -92,7 +64,9 @@ def init_routes(app):
     @app.route("/venues/<int:venue_id>")
     def venue(venue_id):
 
+        venue = dict(get_venue_by_id(venue_id))
+
         return render_template(
             "venue.html",
-            venue_id=venue_id
+            venue=venue
         )

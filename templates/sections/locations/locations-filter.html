@@ -2,71 +2,88 @@
 
   <div class="container">
 
-    <div class="locations-search-wrapper mb-4">
+    <div
+      class="rounded-5 p-0"
+    >
 
-      <div class="input-group locations-search-group">
+      <div
+        class="d-flex flex-column flex-xl-row align-items-xl-center gap-4"
+      >
 
-        <span class="input-group-text bg-white border-0 px-4">
-          <i class="bi bi-search"></i>
-        </span>
+        <!-- SEARCH -->
 
-        <input
-          type="text"
-          class="form-control border-0 shadow-none py-3"
-          placeholder="Search venue name..."
+        <div class="flex-grow-1">
+
+          <div
+            class="input-group bg-white border rounded-5 px-3 py-2 shadow-sm"
+          >
+
+            <span class="input-group-text bg-transparent border-0">
+              <i class="bi bi-search text-danger"></i>
+            </span>
+
+            <input
+              type="text"
+              id="venue-search"
+              class="form-control border-0 shadow-none bg-transparent"
+              placeholder="Search venue name..."
+            >
+
+          </div>
+
+        </div>
+
+        <!-- VENUE TYPES -->
+
+        <div
+          class="d-flex align-items-center flex-wrap gap-2 pt-2"
         >
 
+          <button
+            class="btn rounded-pill px-4 active-filter-btn filter-trigger"
+            data-category="All"
+          >
+            All
+          </button>
+
+          <button
+            class="btn rounded-pill px-4 filter-btn filter-trigger"
+            data-category="Church"
+          >
+            Churches
+          </button>
+
+          <button
+            class="btn rounded-pill px-4 filter-btn filter-trigger"
+            data-category="Mosque"
+          >
+            Mosques
+          </button>
+
+          <button
+            class="btn rounded-pill px-4 filter-btn filter-trigger"
+            data-category="Synagogue"
+          >
+            Synagogues
+          </button>
+
+          <button
+            class="btn rounded-pill px-4 filter-btn filter-trigger"
+            data-category="Temple"
+          >
+            Temples
+          </button>
+
+          <button
+            class="btn rounded-pill px-4 filter-btn filter-trigger"
+            data-category="Other"
+          >
+            Other
+          </button>
+
+        </div>
+
       </div>
-
-    </div>
-
-    <h5 class="locations-filter-title mb-3">
-      Browse by venue type
-    </h5>
-
-    <div class="locations-filter-buttons d-flex flex-wrap gap-3">
-
-      <button
-        class="locations-filter-btn active"
-        data-category="All"
-      >
-        All
-      </button>
-
-      <button
-        class="locations-filter-btn"
-        data-category="Church"
-      >
-        Church
-      </button>
-
-      <button
-        class="locations-filter-btn"
-        data-category="Mosque"
-      >
-        Mosque
-      </button>
-
-      <button
-        class="locations-filter-btn"
-        data-category="Synagogue"
-      >
-        Synagogue
-      </button>
-
-      <button
-        class="locations-filter-btn"
-        data-category="Temple"
-      >
-        Temple
-      </button>
-
-      <button
-        class="locations-filter-btn"
-        data-category="Other"
-      >
-        Other
-      </button>
 
     </div>
 

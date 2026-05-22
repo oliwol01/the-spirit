@@ -39,3 +39,26 @@ def get_all_venues():
     connection.close()
 
     return venues
+
+
+def get_venue_by_id(venue_id):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM venues
+        WHERE venue_id = ?
+        AND is_published = 1
+        """,
+        (venue_id,)
+    )
+
+    venue = cursor.fetchone()
+
+    connection.close()
+
+    return venue

@@ -1,0 +1,201 @@
+#venue-hero {
+
+  overflow: hidden;
+
+}
+
+.venue-hero-image {
+
+  height: 80vh;
+
+  object-fit: cover;
+
+}
+.venue-maker-message {
+
+  max-width: 320px;
+
+}
+
+.venue-maker-border-top {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 75%;
+  height: 1px;
+
+  background: #f3cfcf;
+
+}
+
+.venue-maker-border-top::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 1px;
+  height: 120px;
+
+  background: #f3cfcf;
+
+}
+
+.venue-maker-border-bottom {
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 75%;
+  height: 1px;
+
+  background: #f3cfcf;
+
+}
+
+.venue-maker-border-bottom::after {
+
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 1px;
+  height: 120px;
+
+  background: #f3cfcf;
+
+}
+
+.venue-maker-heading {
+
+  font-family: "Cormorant Garamond", serif;
+
+}
+
+.venue-maker-text {
+
+  line-height: 1.5;
+
+  max-width: 220px;
+
+}
+/* ── VENUE DETAILS ────────────────────── */
+
+#venue-details {
+
+  overflow: hidden;
+
+}
+
+.venue-details-card {
+
+  background: rgba(255,255,255,0.58);
+
+  border: 1px solid #ece4e4;
+
+  backdrop-filter: blur(8px);
+
+}
+
+.venue-details-title {
+
+  font-family: "Cormorant Garamond", serif;
+
+  line-height: 1;
+
+}
+
+.venue-details-icon {
+
+  width: 42px;
+  height: 42px;
+
+  background: #fdf0f0;
+
+  color: #E60000;
+
+  flex-shrink: 0;
+
+}
+
+.venue-tag-pill {
+
+  background: #f6dddd;
+
+  color: #8a4b4b;
+
+  font-size: 0.95rem;
+
+  line-height: 1;
+
+}
+
+.venue-subheading {
+
+  color: #8d7474;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+}
+
+#venue-details p {
+
+  line-height: 1.6;
+
+  color: #4f4f4f;
+
+}
+
+.venue-contact-link {
+
+  color: #E60000;
+
+}
+/* ── VENUE CTA ────────────────────── */
+
+.venue-cta-wrapper {
+
+  background: #f4d6d6;
+
+}
+
+.venue-cta-btn {
+
+  background: var(--spirit-red);
+
+  color: white;
+
+  transition: 0.2s ease;
+
+}
+
+.venue-cta-btn:hover {
+
+  background: #c40000;
+
+  color: white;
+
+}
+
+#venue-cta h2 {
+
+  line-height: 1.1;
+
+  max-width: 900px;
+
+  margin-inline: auto;
+
+}

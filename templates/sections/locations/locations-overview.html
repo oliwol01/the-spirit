@@ -1,0 +1,52 @@
+<section id="locations-overview" class="pb-5">
+
+  <div class="container">
+
+    <div class="d-flex align-items-center justify-content-between mb-4">
+
+      <h2
+        id="locations-results-label"
+        class="fs-2 fw-semibold mb-0 spirit-title-page"
+      >
+        All venues
+      </h2>
+
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-3">
+
+      {% for venue in venues %}
+
+        <div
+          class="col venue-card-wrapper"
+          data-category="{{ venue.venue_type }}"
+        >
+
+          {% include "components/venue-card.html" %}
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+    <!-- NO RESULTS -->
+
+    <div
+      id="no-results-message"
+      class="text-center py-5 d-none"
+    >
+
+      <h3 class="fs-4 mb-2">
+        No venues found
+      </h3>
+
+      <p class="text-secondary mb-0">
+        There are no venues in this category yet.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,247 @@
+<section id="venue-details" class="pb-5">
+
+  <div class="container">
+
+    <h2 class="fs-2 spirit-hero-subtitle mb-5">
+      Programming & Collaboration
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- PROGRAMMING -->
+
+      <div class="col-lg-4">
+
+        <div class="venue-details-card rounded-5 p-4 h-100">
+
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <div class="venue-details-icon rounded-circle d-flex align-items-center justify-content-center">
+
+              <i class="bi bi-stars"></i>
+
+            </div>
+
+            <h3 class="venue-details-title fs-3 mb-0">
+              Programming we love
+            </h3>
+
+          </div>
+
+          <div class="d-flex flex-wrap gap-3">
+
+            {% for tag in venue.programming_tags.split(',') %}
+
+              <span class="venue-tag-pill rounded-pill px-3 py-2">
+
+                {{ tag.strip() }}
+
+              </span>
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRACTICAL DETAILS -->
+
+      <div class="col-lg-4">
+
+        <div class="venue-details-card rounded-5 p-4 h-100">
+
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <div class="venue-details-icon rounded-circle d-flex align-items-center justify-content-center">
+
+              <i class="bi bi-info-lg"></i>
+
+            </div>
+
+            <h3 class="venue-details-title fs-3 mb-0">
+              Practical Details
+            </h3>
+
+          </div>
+
+          <div class="mb-5">
+
+            <div class="d-flex align-items-center gap-2 venue-subheading mb-3">
+
+              <i class="bi bi-universal-access"></i>
+
+              <h4 class="fs-6 fw-semibold mb-0">
+                Accessibility
+              </h4>
+
+            </div>
+
+            {% for feature in venue.accessibility_features.split(',') %}
+
+              <p class="mb-2">
+
+                {{ feature.strip() }}
+
+              </p>
+
+            {% endfor %}
+
+          </div>
+
+          <div class="mb-5">
+
+            <div class="d-flex align-items-center gap-2 venue-subheading mb-3">
+
+              <i class="bi bi-building"></i>
+
+              <h4 class="fs-6 fw-semibold mb-0">
+                Space Details
+              </h4>
+
+            </div>
+
+            <p class="mb-2">
+              {{ venue.venue_type }}
+            </p>
+
+            <p class="mb-0">
+              Fits {{ venue.capacity }}
+            </p>
+
+          </div>
+
+          <div>
+
+            <div class="d-flex align-items-center gap-2 venue-subheading mb-3">
+
+              <i class="bi bi-exclamation-circle"></i>
+
+              <h4 class="fs-6 fw-semibold mb-0">
+                Restrictions
+              </h4>
+
+            </div>
+
+            <p class="mb-0">
+
+              {{ venue.restrictions or 'None' }}
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONTACT -->
+
+      <div class="col-lg-4">
+
+        <div class="venue-details-card rounded-5 p-4 h-100">
+
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <div class="venue-details-icon rounded-circle d-flex align-items-center justify-content-center">
+
+              <i class="bi bi-geo-alt"></i>
+
+            </div>
+
+            <h3 class="venue-details-title fs-3 mb-0">
+              Contact & Location
+            </h3>
+
+          </div>
+
+          <div class="mb-5">
+
+            <div class="d-flex align-items-center gap-2 venue-subheading mb-3">
+
+              <i class="bi bi-pin-map"></i>
+
+              <h4 class="fs-6 fw-semibold mb-0">
+                Address
+              </h4>
+
+            </div>
+
+            <p class="mb-2">
+              {{ venue.street_address }}
+            </p>
+
+            <p class="mb-2">
+              {{ venue.postal_code }}
+            </p>
+
+            <p class="mb-0">
+              {{ venue.city }}
+            </p>
+
+          </div>
+
+          <div>
+
+            <div class="d-flex align-items-center gap-2 venue-subheading mb-3">
+
+              <i class="bi bi-link-45deg"></i>
+
+              <h4 class="fs-6 fw-semibold mb-0">
+                Useful links
+              </h4>
+
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+
+              {% if venue.website_url %}
+
+                <a
+                  href="{{ venue.website_url }}"
+                  target="_blank"
+                  class="venue-contact-link text-decoration-none"
+                >
+                  Website
+                </a>
+
+              {% endif %}
+
+              {% if venue.instagram_url %}
+
+                <a
+                  href="{{ venue.instagram_url }}"
+                  target="_blank"
+                  class="venue-contact-link text-decoration-none"
+                >
+                  Instagram
+                </a>
+
+              {% endif %}
+
+              {% if venue.facebook_url %}
+
+                <a
+                  href="{{ venue.facebook_url }}"
+                  target="_blank"
+                  class="venue-contact-link text-decoration-none"
+                >
+                  Facebook
+                </a>
+
+              {% endif %}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
