@@ -73,3 +73,15 @@ body {
     display: none;
 }
 
+.btn-check:checked + .spirit-btn-outline-red {
+  background: var(--spirit-red);
+  color: white;
+}
+
+.form-control::placeholder {
+  font-style: italic;
+}
+
+.form-label {
+  font-weight: 600;
+}

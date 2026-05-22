@@ -52,3 +52,13 @@ def init_routes(app):
     def submit_proposal():
         return redirect(url_for("home"))
 
+    @app.route("/maker-onboarding")
+    def maker_onboarding():
+
+        return render_template(
+            "maker-onboarding.html"
+        )
+    
+    @app.route("/venue-onboarding")
+    def venue_onboarding():
+        return render_template("venue-onboarding.html")
