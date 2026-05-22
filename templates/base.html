@@ -62,5 +62,14 @@ function showSection(number) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
+
+<script>
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('tag')) {
+        e.target.classList.toggle('active');
+    }
+});
+</script>
   </body>
 </html>
+
