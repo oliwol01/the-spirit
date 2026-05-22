@@ -1,64 +1,68 @@
 <section id="section-3" class="proposal-wrapper container py-5 form-section hidden">
 
-        <h1 class="proposal-title text-center mb-5">
+    <h1 class="proposal-title text-center mb-5">
         Proposal Form
     </h1>
 
-    
-
     <div class="proposal-card">
 
-
-        <h2 class="section-title">Experience & Practical Information</h2>
+        <h2 class="section-title">
+            Experience & Practical Information
+        </h2>
 
         <div class="mb-4">
-                <label class="proposal-label">
-                    What happens during the event*
-                </label>
+            <label class="proposal-label">
+                What happens during the event?*
+            </label>
 
-                <input
-                    type="text"
-                    class="proposal-input"
-                    maxlength="20"
-                >
-            </div>
+            <input
+                type="text"
+                name="event_flow"
+                class="proposal-input"
+            >
+        </div>
 
-        
         <div class="mb-4">
-                <label class="proposal-label">
-                    What should people feel or take away*
-                </label>
+            <label class="proposal-label">
+                What should people feel or take away?*
+            </label>
 
-                <input
-                    type="text"
-                    class="proposal-input"
-                    maxlength="20"
-                >
-            </div>
-        
-         <div class="mb-2">
-  <label class="proposal-label">Expected audience size?*</label>
-</div>
-<label class="checkbox-item">
-  <input type="checkbox" name="collab">
-  5-10 people
-</label>
+            <input
+                type="text"
+                name="takeaway"
+                class="proposal-input"
+            >
+        </div>
 
-<label class="checkbox-item">
-  <input type="checkbox" name="collab">
-    20-50 people
-</label>
+        <div class="mb-2">
+            <label class="proposal-label">
+                Expected audience size?*
+            </label>
+        </div>
 
-<label class="checkbox-item">
-  <input type="checkbox" name="collab">
-    50-100 people
-</label>
+        <label class="checkbox-item">
+            <input type="radio" name="audience" value="5-10">
+            5-10 people
+        </label>
 
-<label class="checkbox-item">
-  <input type="checkbox" name="collab">
-    100+ people
-</label>
+        <label class="checkbox-item">
+            <input type="radio" name="audience" value="20-50">
+            20-50 people
+        </label>
 
+        <label class="checkbox-item">
+            <input type="radio" name="audience" value="50-100">
+            50-100 people
+        </label>
+
+        <label class="checkbox-item">
+            <input type="radio" name="audience" value="100+">
+            100+ people
+        </label>
+
+        <button type="submit" class="next-btn">
+            Submit
+        </button>
 
     </div>
 
