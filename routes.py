@@ -51,3 +51,10 @@ def init_routes(app):
         return render_template(
             "maker-onboarding.html"
         )
+    
+    @app.route("/maker-page")
+    def maker_profile():
+
+        return render_template(
+            "maker-page.html"
+        )

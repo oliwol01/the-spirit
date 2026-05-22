@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Maker Onboarding{% endblock %}
+
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/maker-page.css') }}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Image -->
+<section id="venue-hero" class="w-100">
+  <img src="{{ url_for('static', filename='img/maker/cover_image.jpg') }}" class="venue-hero-image w-100" alt="Typhoon">
+</section>
+
+<!-- Bio + Message -->
+<section class="container py-5">
+  <div class="row align-items-start">
+
+    <div class="col-md-6">
+      <h1 class="venue-details-title display-4 mb-4">Typhoon</h1>
+      <p>Glenn de Randamie (1984), known as Typhoon, is a Dutch rapper, singer and inspirer born and raised in 't Harde. Inspired by his brother Blaxtar, he started writing at age 12 and joined rap group Rudeteenz at 15, alongside Blaxtar and the well-known Dutch hip-hop formation Opgezwolle.</p>
+      <p>After winning the Grote Prijs — the biggest hip-hop prize in the Netherlands — Typhoon signed to Top Notch records. In 2007 he released his solo debut <em>Tussen Licht en Lucht</em>, followed by the acclaimed <em>Lobi Da Basi</em> (Surinamese for "Love Rules") in 2014, which made him a festival favourite with both hip-hop and pop audiences. His most recent album, <em>Lichthuis</em>, was released in 2020.</p>
+      <p>His work radiates hope, connection and the belief that we are enough — we are love.</p>
+    </div>
+
+    <div class="col-md-4 offset-md-2">
+      <div class="venue-maker-message position-relative p-4">
+        <div class="venue-maker-border-top"></div>
+        <p class="venue-maker-heading mb-1">Dear Venue,</p>
+        <p class="venue-maker-text fst-italic">"I create music and experiences rooted in love, faith and human connection. I am looking for spaces that feel alive — places where my work can breathe and where audiences can truly come together."</p>
+        <div class="venue-maker-border-bottom"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Themes + Genre -->
+<section class="container pb-5">
+  <div class="row">
+
+    <div class="col-md-5">
+      <div class="venue-details-card rounded-4 p-4">
+        <p class="venue-subheading small mb-3">Common Themes</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">New Encounters</span>
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">Mindfulness</span>
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">Self Discovery</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5 offset-md-1">
+      <div class="venue-details-card rounded-4 p-4">
+        <p class="venue-subheading small mb-3">Genre of maker</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">Music</span>
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">Dance</span>
+          <span class="venue-tag-pill px-3 py-2 rounded-pill">Storytelling</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Social Media + Useful Links -->
+<section class="container pb-5">
+  <hr style="border-color: #E60000; border-top: 2px solid #E60000; opacity: 1;">
+  <div class="row pt-4 justify-content-center">
+
+    <div class="col-md-3">
+      <p class="venue-maker-heading red">Social Media</p>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-dark text-decoration-none">Instagram</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">LinkedIn</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">TikTok</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-3">
+      <p class="venue-maker-heading red">Useful links</p>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-dark text-decoration-none">Website</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">Spotify</a></li>
+        <li><a href="#" class="text-dark text-decoration-none">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <hr style="border-color: #E60000; border-top: 2px solid #E60000; opacity: 1;">
+</section>
+
+<!-- Previous Events -->
+<section class="container pb-5">
+  <h2 class="venue-details-title text-center mb-4">Previous Events</h2>
+  <div class="row g-3">
+
+    <div class="col-6 col-md-3">
+      <div class="maker-event-card">
+        <img src="{{ url_for('static', filename='img/maker/maker_image1.jpg') }}" class="w-100 rounded-3" alt="Event">
+        <div class="maker-event-info p-2">
+          <p class="fw-bold mb-0" style="color: var(--spirit-red);">Opening Ceremony (With Typhoon & Shishani)</p>
+          <p class="small text-muted mb-0">Storytelling</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="maker-event-card">
+        <img src="{{ url_for('static', filename='img/maker/maker_image2.jpg') }}" class="w-100 rounded-3" alt="Event">
+        <div class="maker-event-info p-2">
+          <p class="fw-bold mb-0" style="color: var(--spirit-red);">We Are Love</p>
+          <p class="small text-muted mb-0">Music</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="maker-event-card">
+        <img src="{{ url_for('static', filename='img/maker/maker_image3.jpg') }}" class="w-100 rounded-3" alt="Event">
+        <div class="maker-event-info p-2">
+          <p class="fw-bold mb-0" style="color: var(--spirit-red);">Roots & Resonance</p>
+          <p class="small text-muted mb-0">Connection</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="maker-event-card">
+        <img src="{{ url_for('static', filename='img/maker/event4.jpeg') }}" class="w-100 rounded-3" alt="Event">
+        <div class="maker-event-info p-2">
+          <p class="fw-bold mb-0" style="color: var(--spirit-red);">Songs for the Soul</p>
+          <p class="small text-muted mb-0">Music</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
