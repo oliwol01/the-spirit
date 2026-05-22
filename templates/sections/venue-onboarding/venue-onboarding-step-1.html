@@ -16,72 +16,150 @@
   <h3 class="subheader">Venue Details</h3>
 
   <label class="form-label">What is your venue name?*</label>
-  <input type="text" class="textbox" id="venue-name" name="venue-name" required>
+  <input
+    type="text"
+    class="textbox"
+    id="venue-name"
+    name="venue_name"
+    required
+    minlength="2"
+    maxlength="80"
+    autocomplete="organization"
+  >
 
   <!-- I think required is only needed on one radio input because they all share the same name -->
   <label class="form-label">Which prayer house or other location do you represent?*</label>
   <div class="pill-options">
     <label class="pill-option">
-      <input type="radio" name="venue-type" value="church" required>
+      <input type="radio" name="venue_type" value="church" required>
       <span class="pill">Church</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-type" value="mosque">
+      <input type="radio" name="venue_type" value="mosque">
       <span class="pill">Mosque</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-type" value="synagogue">
+      <input type="radio" name="venue_type" value="synagogue">
       <span class="pill">Synagogue</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-type" value="temple">
+      <input type="radio" name="venue_type" value="temple">
       <span class="pill">Temple</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-type" value="other">
+      <input type="radio" name="venue_type" value="other">
       <span class="pill">Other</span>
     </label>
   </div>
-  <input type="text" class="textbox" id="venue-description" name="venue-description" placeholder="If other, please specify">
+  <input
+    type="text"
+    class="textbox"
+    id="venue-description"
+    name="venue_type_other"
+    placeholder="If other, please specify"
+    maxlength="100"
+  >
 
   <!-- only labelled the postcode field as required -->
   <label class="form-label">Venue Address*</label>
   <div class="grouped-inputs">
     <div class="grouped-input-row">
       <span class="grouped-input-label">Street:</span>
-      <input type="text" class="grouped-input-field" id="venue-street" name="venue-street">
+      <input
+        type="text"
+        class="grouped-input-field"
+        id="venue-street"
+        name="street_address"
+        maxlength="120"
+        autocomplete="street-address"
+      >
     </div>
     <div class="grouped-input-row">
       <span class="grouped-input-label">Postal Code:</span>
-      <input type="text" class="grouped-input-field" id="venue-postal-code" name="venue-postal-code" required>
+      <input
+        type="text"
+        class="grouped-input-field"
+        id="venue-postal-code"
+        name="postal_code"
+        required
+        maxlength="20"
+        autocomplete="postal-code"
+      >
     </div>
     <div class="grouped-input-row">
       <span class="grouped-input-label">City:</span>
-      <input type="text" class="grouped-input-field" id="venue-city" name="venue-city">
+      <input
+        type="text"
+        class="grouped-input-field"
+        id="venue-city"
+        name="city"
+        maxlength="60"
+        autocomplete="address-level2"
+      >
     </div>
   </div>
 
   <h3 class="subheader">Contact Details</h3>
 
   <label class="form-label">Email Address*</label>
-  <input type="email" class="textbox" id="venue-email" name="venue-email" required>
+  <input
+    type="email"
+    class="textbox"
+    id="venue-email"
+    name="venue_email"
+    required
+    maxlength="120"
+    autocomplete="email"
+  >
 
   <label class="form-label">Telephone Number*</label>
-  <input type="tel" class="textbox" id="venue-telephone" name="venue-telephone" required>
+  <input
+    type="tel"
+    class="textbox"
+    id="venue-telephone"
+    name="phone"
+    required
+    inputmode="tel"
+    autocomplete="tel"
+    pattern="^[0-9+()\-\s]{7,20}$"
+    maxlength="20"
+  >
 
   <label class="form-label">Useful links</label>
   <div class="grouped-inputs">
     <div class="grouped-input-row">
       <span class="grouped-input-label">Website:</span>
-      <input type="text" class="grouped-input-field" id="venue-website" name="venue-website">
+      <input
+        type="url"
+        class="grouped-input-field"
+        id="venue-website"
+        name="website_url"
+        maxlength="200"
+        placeholder="https://example.com"
+        autocomplete="url"
+      >
     </div>
     <div class="grouped-input-row">
       <span class="grouped-input-label">Instagram:</span>
-      <input type="text" class="grouped-input-field" id="venue-instagram" name="venue-instagram">
+      <input
+        type="url"
+        class="grouped-input-field"
+        id="venue-instagram"
+        name="instagram_url"
+        maxlength="200"
+        placeholder="https://instagram.com/..."
+      >
     </div>
     <div class="grouped-input-row">
       <span class="grouped-input-label">Facebook:</span>
-      <input type="text" class="grouped-input-field" id="venue-facebook" name="venue-facebook">
+      <input
+        type="url"
+        class="grouped-input-field"
+        id="venue-facebook"
+        name="facebook_url"
+        maxlength="200"
+        placeholder="https://facebook.com/..."
+      >
     </div>
   </div>
 

@@ -18,48 +18,64 @@
   <p>Photos help makers understand the atmosphere and possibilities of your space.<br>
     You can upload up to 4 photos.</p>
 
-  <label class="form-label">Cover photo*</label>
-  <label for="venue-cover-photo" style="display: flex; flex-direction: column; align-items: center;
-    justify-content: center; width: 100%; padding: 32px; border-radius: 18px; text-align: center;
-    border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+  <label class="form-label">Cover photo</label>
+  <label for="venue-cover-photo" class="venue-upload-card venue-upload-card-cover">
     <i class="bi bi-image fs-3 text-secondary"></i>
-    <strong style="margin-top: 8px;">Upload cover photo</strong>
-    <small style="color: #888;">JPG or PNG, max 10MB<br>Recommended: 16:9 landscape</small>
-    <input type="file" id="venue-cover-photo" style="display: none;" accept=".jpg,.png">
+    <strong class="venue-upload-title">Upload cover photo</strong>
+    <small class="venue-upload-meta">JPG or PNG, max 10MB<br>Recommended: 16:9 landscape</small>
+    <input
+      type="file"
+      id="venue-cover-photo"
+      name="cover_image"
+      class="venue-hidden-input"
+      accept="image/png, image/jpeg, image/webp"
+    >
   </label>
 
-  <label class="form-label" style="margin-top: 28px;">Additional photos (optional)</label>
-  <div style="display: flex; gap: 12px;">
+  <label class="form-label venue-additional-label">Additional photos (optional)</label>
+  <div class="venue-upload-grid">
 
-    <label for="venue-additional-photo-1" style="display: flex; flex-direction: column; align-items: center;
-      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
-      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+    <label for="venue-additional-photo-1" class="venue-upload-card venue-upload-card-small">
       <i class="bi bi-plus fs-3 text-secondary"></i>
-      <strong style="margin-top: 8px;">Add photo</strong>
-      <input type="file" id="venue-additional-photo-1" style="display: none;" accept=".jpg,.png">
+      <strong class="venue-upload-title">Add photo</strong>
+      <input
+        type="file"
+        id="venue-additional-photo-1"
+        name="images"
+        class="venue-hidden-input"
+        accept="image/png, image/jpeg, image/webp"
+      >
     </label>
 
-    <label for="venue-additional-photo-2" style="display: flex; flex-direction: column; align-items: center;
-      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
-      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+    <label for="venue-additional-photo-2" class="venue-upload-card venue-upload-card-small">
       <i class="bi bi-plus fs-3 text-secondary"></i>
-      <strong style="margin-top: 8px;">Add photo</strong>
-      <input type="file" id="venue-additional-photo-2" style="display: none;" accept=".jpg,.png">
+      <strong class="venue-upload-title">Add photo</strong>
+      <input
+        type="file"
+        id="venue-additional-photo-2"
+        name="images"
+        class="venue-hidden-input"
+        accept="image/png, image/jpeg, image/webp"
+      >
     </label>
 
-    <label for="venue-additional-photo-3" style="display: flex; flex-direction: column; align-items: center;
-      justify-content: center; flex: 1; padding: 32px; border-radius: 18px; text-align: center;
-      border: 2px dashed var(--spirit-red); cursor: pointer; background: #fdf5f5;">
+    <label for="venue-additional-photo-3" class="venue-upload-card venue-upload-card-small">
       <i class="bi bi-plus fs-3 text-secondary"></i>
-      <strong style="margin-top: 8px;">Add photo</strong>
-      <input type="file" id="venue-additional-photo-3" style="display: none;" accept=".jpg,.png">
+      <strong class="venue-upload-title">Add photo</strong>
+      <input
+        type="file"
+        id="venue-additional-photo-3"
+        name="images"
+        class="venue-hidden-input"
+        accept="image/png, image/jpeg, image/webp"
+      >
     </label>
 
   </div>
 
   <div class="form-nav">
     <button type="button" class="form-btn btn-back">← Back</button>
-    <button type="submit" class="form-btn">Submit</button>
+    <button type="submit" class="btn-submit">Submit</button>
   </div>
 
 </div>

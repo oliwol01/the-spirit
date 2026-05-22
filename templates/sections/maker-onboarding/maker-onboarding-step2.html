@@ -20,7 +20,7 @@
 <div class="form-group">
 <label class="form-label">What type of maker are you? (Select a maximum of 3)*</label>
   <div class="pill-options">
-    <label class="pill-option"><input type="checkbox" name="genre" value="music" required/><span class="pill">Music</span></label>
+    <label class="pill-option"><input type="checkbox" name="genre" value="music"/><span class="pill">Music</span></label>
     
     <label class="pill-option"><input type="checkbox" name="genre" value="exhibition" /><span class="pill">Exhibition</span></label>
     
@@ -48,20 +48,52 @@
 
 <!-- Themes -->
   <label for="theme" class="form-label">What type of themes are present within your work?*</label>
-  <input type="text" id="maker-theme" name="maker_theme" class="textbox" required>
+  <input
+    type="text"
+    id="maker-theme"
+    name="maker_theme"
+    class="textbox"
+    required
+    minlength="5"
+    maxlength="200"
+    placeholder="Identity, community, sustainability..."
+  >
 
 <!-- Previous performances -->
   <label for="theme" class="form-label">Previous performances</label>
-  <input type="text" id="previous-performances" name="previous_performances" class="textbox">
+  <input
+    type="text"
+    id="previous-performances"
+    name="previous_performances"
+    class="textbox"
+    maxlength="300"
+    placeholder="Festivals, galleries, workshops, venues..."
+  >
 
-<!-- Previous performances -->
-  <label for="theme" class="form-label">Photos or logos</label>
-  <input type="text" id="photos-logos" name="photos_logos" class="textbox">
+<!-- Photos or logos -->
+<label for="photos-logos" class="form-label">Photos or logos</label>
+
+<div class="border rounded-4 p-4 bg-light-subtle text-center mb-4">
+
+  <input
+    type="file"
+    id="photos-logos"
+    name="photos_logos"
+    class="form-control"
+    multiple
+    accept="image/png, image/jpeg, image/webp"
+  >
+
+  <p class="small text-muted mt-3 mb-0">
+    Upload photos, logos, or visual material related to your work.
+  </p>
+
+</div>
 
 <!-- Navigation buttons -->
 <div class="form-nav">
-  <button class="btn-back">Back</button>
-  <button class="btn-submit">Submit</button>
+  <button type="button" class="btn-back">Back</button>
+  <button type="submit" class="btn-submit">Submit</button>
 </div>
 
 </section>

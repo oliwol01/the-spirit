@@ -18,79 +18,98 @@
   <label class="form-label">Tell the story of your venue.<br>
     Describe the atmosphere, history, community, mission, or character of your space.*
   </label>
-  <textarea class="textbox" id="venue-story" name="venue-story" maxlength="1000"
-    style="height: auto; min-height: 130px;" required></textarea>
+  <textarea
+    class="textbox venue-textarea-lg"
+    id="venue-story"
+    name="description"
+    maxlength="1000"
+    required
+  ></textarea>
 
   <label class="form-label">Which forms of art, culture, or other programs suit you best?*<br>
     Please select all that apply.
   </label>
   <div class="pill-options">
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="theatre">
+      <input type="checkbox" name="programming_tags" value="theatre">
       <span class="pill">Theatre</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="spoken-word">
+      <input type="checkbox" name="programming_tags" value="spoken-word">
       <span class="pill">Spoken word</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="music">
+      <input type="checkbox" name="programming_tags" value="music">
       <span class="pill">Music/concerts</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="workshops">
+      <input type="checkbox" name="programming_tags" value="workshops">
       <span class="pill">Workshops</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="silence-experiences">
+      <input type="checkbox" name="programming_tags" value="silence-experiences">
       <span class="pill">Silence experiences</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="rituals-ceremonies">
+      <input type="checkbox" name="programming_tags" value="rituals-ceremonies">
       <span class="pill">Rituals/ceremonies</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="exhibitions">
+      <input type="checkbox" name="programming_tags" value="exhibitions">
       <span class="pill">Exhibitions</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="light-art">
+      <input type="checkbox" name="programming_tags" value="light-art">
       <span class="pill">Light art</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="movie-screenings">
+      <input type="checkbox" name="programming_tags" value="movie-screenings">
       <span class="pill">Movie screenings</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="dinner">
+      <input type="checkbox" name="programming_tags" value="dinner">
       <span class="pill">Dinner</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="dance">
+      <input type="checkbox" name="programming_tags" value="dance">
       <span class="pill">Dance</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-program" value="other">
+      <input type="checkbox" name="programming_tags" value="other">
       <span class="pill">Other</span>
     </label>
   </div>
 
-  <span id="venue-program-error" style="display:none; color:red; font-size:0.875rem;">
+  <span id="venue-program-error" class="venue-program-error">
     Please select at least one option.
   </span>
   
-  <input type="text" class="textbox" id="venue-program-description" name="venue-program-description"
-    placeholder="Description if preferred">
+  <input
+    type="text"
+    class="textbox"
+    id="venue-program-description"
+    name="programming_other"
+    placeholder="Description if preferred"
+    maxlength="200"
+  >
 
   <label class="form-label">Do you want to say something about the programming?
     For example, about what is really <em>not</em> desired?
   </label>
-  <textarea class="textbox" id="venue-not-desired" name="venue-not-desired" maxlength="250"
-    style="height: auto; min-height: 130px;"></textarea>
+  <textarea
+    class="textbox venue-textarea-lg"
+    id="venue-not-desired"
+    name="restrictions"
+    maxlength="250"
+  ></textarea>
 
-  <label class="form-label">What would you like prospective makers to know about your location?*</label>
-  <textarea class="textbox" id="venue-info-for-makers" name="venue-info-for-makers" maxlength="250"
-    style="height: auto; min-height: 130px;" required></textarea>
+  <label class="form-label">What would you like prospective makers to know about your location?</label>
+  <textarea
+    class="textbox venue-textarea-lg"
+    id="venue-info-for-makers"
+    name="maker_message"
+    maxlength="250"
+  ></textarea>
 
   <div class="form-nav">
     <button type="button" class="form-btn btn-back">← Back</button>

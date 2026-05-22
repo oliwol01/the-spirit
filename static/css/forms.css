@@ -189,3 +189,121 @@
 .btn-submit:hover {
   background-color: #3a3a3a;
 }
+.venue-textarea-lg {
+
+  height: auto;
+
+  min-height: 130px;
+
+  resize: vertical;
+
+}
+
+.venue-program-error {
+
+  display: none;
+
+  color: var(--spirit-red);
+
+  font-size: 0.875rem;
+
+  margin-top: 0.5rem;
+
+  margin-bottom: 1rem;
+
+}
+.venue-upload-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 32px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  border: 2px dashed var(--spirit-red);
+
+  cursor: pointer;
+
+  background: #fdf5f5;
+
+  transition: 0.2s ease;
+
+}
+
+.venue-upload-card:hover {
+
+  background: #fbecec;
+
+  border-color: #c40000;
+
+}
+
+.venue-upload-card-cover {
+
+  width: 100%;
+
+}
+
+.venue-upload-card-small {
+
+  flex: 1;
+
+  min-height: 180px;
+
+}
+
+.venue-upload-grid {
+
+  display: flex;
+
+  gap: 12px;
+
+}
+
+.venue-upload-title {
+
+  margin-top: 8px;
+
+  font-weight: 600;
+
+}
+
+.venue-upload-meta {
+
+  color: #888;
+
+  margin-top: 4px;
+
+  line-height: 1.4;
+
+}
+
+.venue-hidden-input {
+
+  display: none;
+
+}
+
+.venue-additional-label {
+
+  margin-top: 28px;
+
+}
+
+@media (max-width: 768px) {
+
+  .venue-upload-grid {
+
+    flex-direction: column;
+
+  }
+
+}

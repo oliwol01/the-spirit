@@ -18,19 +18,19 @@
   <label class="form-label">What is the capacity (number of possible visitors) of your location?*</label>
   <div class="pill-options">
     <label class="pill-option">
-      <input type="radio" name="venue-capacity" value="5-20" required>
+      <input type="radio" name="capacity" value="5-20" required>
       <span class="pill">5–20 people</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-capacity" value="20-50">
+      <input type="radio" name="capacity" value="20-50">
       <span class="pill">20–50 people</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-capacity" value="50-100">
+      <input type="radio" name="capacity" value="50-100">
       <span class="pill">50–100 people</span>
     </label>
     <label class="pill-option">
-      <input type="radio" name="venue-capacity" value="100+">
+      <input type="radio" name="capacity" value="100+">
       <span class="pill">100+ people</span>
     </label>
   </div>
@@ -40,30 +40,46 @@
   </label>
   <div class="pill-options">
     <label class="pill-option">
-      <input type="checkbox" name="venue-accessibility" value="step-free-access">
+      <input type="checkbox" name="accessibility_features" value="step-free-access">
       <span class="pill">Step-free access</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-accessibility" value="accessible-toilets">
+      <input type="checkbox" name="accessibility_features" value="accessible-toilets">
       <span class="pill">Accessible toilets</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-accessibility" value="clear-circulation-routes">
+      <input type="checkbox" name="accessibility_features" value="clear-circulation-routes">
       <span class="pill">Clear circulation routes</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-accessibility" value="accessible-parking">
+      <input type="checkbox" name="accessibility_features" value="accessible-parking">
       <span class="pill">Accessible parking</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="venue-accessibility" value="other">
+      <input type="checkbox" name="accessibility_features" value="other">
       <span class="pill">Other</span>
     </label>
   </div>
-  <input type="text" class="textbox" id="other-accessibility-specify" placeholder="If other, please specify">
+  <input
+    type="text"
+    class="textbox"
+    id="other-accessibility-specify"
+    name="accessibility_other"
+    placeholder="If other, please specify"
+    maxlength="120"
+  >
 
-  <label class="form-label">What is your location's price (per hour) for use?*</label>
-  <input type="number" class="textbox" id="venue-price" name="venue-price" required>
+  <label class="form-label">What is your location's price (per hour) for use?</label>
+  <input
+    type="number"
+    class="textbox"
+    id="venue-price"
+    name="price"
+    min="0"
+    max="10000"
+    step="0.01"
+    placeholder="0.00"
+  >
 
   <div class="form-nav">
     <button type="button" class="form-btn btn-back">← Back</button>

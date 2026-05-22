@@ -18,11 +18,30 @@
 
 <!-- Name -->
   <label for="artist-name" class="form-label">What is your artist name?*</label>
-  <input type="text" id="artist-name" name="artist_name" class="textbox" required>
+  <input
+    type="text"
+    id="artist-name"
+    name="artist_name"
+    class="textbox"
+    required
+    maxlength="60"
+    minlength="2"
+    autocomplete="nickname"
+  >
 
 <!-- Phone number -->
   <label for="phone-number" class="form-label">Phone Number*</label>
-  <input type="tel" id="maker-phone-number" name="phone_number" class="textbox" required>
+  <input
+    type="tel"
+    id="maker-phone-number"
+    name="phone_number"
+    class="textbox"
+    required
+    inputmode="tel"
+    autocomplete="tel"
+    pattern="^[0-9+()\-\\s]{7,20}$"
+    maxlength="20"
+  >
 
 <!-- Gender -->
 <div class="form-group">
@@ -41,7 +60,15 @@
 <!-- Website -->
 <div class="form-group">
   <label class="form-label" for="website">Website</label>
-  <input class="textbox" type="url" id="maker-website" name="website" />
+  <input
+    class="textbox"
+    type="url"
+    id="maker-website"
+    name="website"
+    maxlength="200"
+    placeholder="https://example.com"
+    autocomplete="url"
+  />
 </div>
 
 <!-- Social media -->
@@ -51,17 +78,41 @@
 
     <div class="grouped-input-row">
       <label class="grouped-input-label" for="instagram">Instagram:</label>
-      <input class="grouped-input-field" type="text" id="maker-instagram" name="instagram" />
+      <input
+        class="grouped-input-field"
+        type="text"
+        id="maker-instagram"
+        name="instagram"
+        maxlength="50"
+        pattern="^[A-Za-z0-9._]+$"
+        placeholder="@username"
+        autocomplete="username"
+      />
     </div>
 
     <div class="grouped-input-row">
       <label class="grouped-input-label" for="linkedin">LinkedIn:</label>
-      <input class="grouped-input-field" type="text" id="maker-linkedin" name="linkedin" />
+      <input
+        class="grouped-input-field"
+        type="text"
+        id="maker-linkedin"
+        name="linkedin"
+        maxlength="100"
+        placeholder="linkedin.com/in/name"
+      />
     </div>
 
     <div class="grouped-input-row">
       <label class="grouped-input-label" for="tiktok">TikTok:</label>
-      <input class="grouped-input-field" type="text" id="maker-tiktok" name="tiktok" />
+      <input
+        class="grouped-input-field"
+        type="text"
+        id="maker-tiktok"
+        name="tiktok"
+        maxlength="50"
+        pattern="^[A-Za-z0-9._]+$"
+        placeholder="@username"
+      />
     </div>
 
   </div>
@@ -69,7 +120,7 @@
 
 <!-- Navigation button -->
 <div class="form-nav form-nav-one">
-  <button class="btn-next">Next</button>
+  <button type="button" class="btn-next">Next</button>
 </div>
 
 </section>
