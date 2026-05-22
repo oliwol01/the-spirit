@@ -1,0 +1,91 @@
+<div class="form-header">
+  <h1 class="form-title">Onboarding</h1>
+  <div class="progress-bar">
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+  </div>
+</div>
+
+<div class="form-section">
+
+  <h3 class="subheader">Venue Details</h3>
+
+  <label class="form-label">What is your venue name?*</label>
+  <input type="text" class="textbox" id="venue-name" name="venue-name" required>
+
+  <!-- I think required is only needed on one radio input because they all share the same name -->
+  <label class="form-label">Which prayer house or other location do you represent?*</label>
+  <div class="pill-options">
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="church" required>
+      <span class="pill">Church</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="mosque">
+      <span class="pill">Mosque</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="synagogue">
+      <span class="pill">Synagogue</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="temple">
+      <span class="pill">Temple</span>
+    </label>
+    <label class="pill-option">
+      <input type="radio" name="venue-type" value="other">
+      <span class="pill">Other</span>
+    </label>
+  </div>
+  <input type="text" class="textbox" id="venue-description" name="venue-description" placeholder="If other, please specify">
+
+  <label class="form-label">Venue Address*</label>
+  <div class="grouped-inputs">
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Street:</span>
+      <input type="text" class="grouped-input-field" id="venue-street" name="venue-street">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Postal Code:</span>
+      <input type="text" class="grouped-input-field" id="venue-postal-code" name="venue-postal-code" required>
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">City:</span>
+      <input type="text" class="grouped-input-field" id="venue-city" name="venue-city">
+    </div>
+  </div>
+
+  <h3 class="subheader">Contact Details</h3>
+
+  <label class="form-label">Email Address*</label>
+  <input type="email" class="textbox" id="venue-email" name="venue-email" required>
+
+  <label class="form-label">Telephone Number*</label>
+  <input type="tel" class="textbox" id="venue-telephone" name="venue-telephone" required>
+
+  <label class="form-label">Useful links</label>
+  <div class="grouped-inputs">
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Website:</span>
+      <input type="text" class="grouped-input-field" id="venue-website" name="venue-website">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Instagram:</span>
+      <input type="text" class="grouped-input-field" id="venue-instagram" name="venue-instagram">
+    </div>
+    <div class="grouped-input-row">
+      <span class="grouped-input-label">Facebook:</span>
+      <input type="text" class="grouped-input-field" id="venue-facebook" name="venue-facebook">
+    </div>
+  </div>
+
+  <div class="form-nav form-nav-one">
+    <button type="button" class="form-btn btn-next">Next →</button>
+  </div>
+
+</div>
