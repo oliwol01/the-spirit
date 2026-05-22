@@ -84,5 +84,16 @@
   });
 
   showStep(0);
+
+  document.querySelector('form').addEventListener('submit', function(e) {
+    const checked = document.querySelectorAll('input[name="venue-program"]:checked');
+    if (checked.length === 0) {
+      e.preventDefault();
+      document.getElementById('venue-program-error').style.display = 'block';
+    } else {
+      document.getElementById('venue-program-error').style.display = 'none';
+    }
+  })
+  
 </script>
 {% endblock %}
