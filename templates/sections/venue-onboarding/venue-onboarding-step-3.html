@@ -26,65 +26,70 @@
   </label>
   <div class="pill-options">
     <label class="pill-option">
-      <input type="checkbox" name="program" value="theatre">
+      <input type="checkbox" name="venue-program" value="theatre">
       <span class="pill">Theatre</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="spoken-word">
+      <input type="checkbox" name="venue-program" value="spoken-word">
       <span class="pill">Spoken word</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="music">
+      <input type="checkbox" name="venue-program" value="music">
       <span class="pill">Music/concerts</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="workshops">
+      <input type="checkbox" name="venue-program" value="workshops">
       <span class="pill">Workshops</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="silence-experiences">
+      <input type="checkbox" name="venue-program" value="silence-experiences">
       <span class="pill">Silence experiences</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="rituals-ceremonies">
+      <input type="checkbox" name="venue-program" value="rituals-ceremonies">
       <span class="pill">Rituals/ceremonies</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="exhibitions">
+      <input type="checkbox" name="venue-program" value="exhibitions">
       <span class="pill">Exhibitions</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="light-art">
+      <input type="checkbox" name="venue-program" value="light-art">
       <span class="pill">Light art</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="movie-screenings">
+      <input type="checkbox" name="venue-program" value="movie-screenings">
       <span class="pill">Movie screenings</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="dinner">
+      <input type="checkbox" name="venue-program" value="dinner">
       <span class="pill">Dinner</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="dance">
+      <input type="checkbox" name="venue-program" value="dance">
       <span class="pill">Dance</span>
     </label>
     <label class="pill-option">
-      <input type="checkbox" name="program" value="other">
+      <input type="checkbox" name="venue-program" value="other">
       <span class="pill">Other</span>
     </label>
   </div>
-  <input type="text" class="textbox" id="program-description" name="program-description"
+
+  <span id="venue-program-error" style="display:none; color:red; font-size:0.875rem;">
+    Please select at least one option.
+  </span>
+  
+  <input type="text" class="textbox" id="venue-program-description" name="venue-program-description"
     placeholder="Description if preferred">
 
   <label class="form-label">Do you want to say something about the programming?
     For example, about what is really <em>not</em> desired?
   </label>
-  <textarea class="textbox" id="not-desired" name="not-desired" maxlength="250"
+  <textarea class="textbox" id="venue-not-desired" name="venue-not-desired" maxlength="250"
     style="height: auto; min-height: 130px;"></textarea>
 
   <label class="form-label">What would you like prospective makers to know about your location?*</label>
-  <textarea class="textbox" id="info-for-makers" name="info-for-makers" maxlength="250"
+  <textarea class="textbox" id="venue-info-for-makers" name="venue-info-for-makers" maxlength="250"
     style="height: auto; min-height: 130px;" required></textarea>
 
   <div class="form-nav">
