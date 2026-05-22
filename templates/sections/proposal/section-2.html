@@ -1,0 +1,67 @@
+<section id="section-2" class="proposal-wrapper container py-5 form-section hidden">
+
+    <h1 class="proposal-title text-center mb-5">
+        Proposal Form
+    </h1>
+
+    <div class="proposal-card">
+
+        <h2 class="section-title">Fit & Collaboration</h2>
+
+        <div class="mb-4 mt-4">
+            <label class="proposal-label">
+                What makes this space the right place for you?*
+            </label>
+
+            <input
+                type="text"
+                name="fit_reason"
+                class="proposal-input"
+                maxlength="100"
+                wordlimit="100"
+            >
+        </div>
+
+        <div class="mb-2">
+            <label class="proposal-label">
+                Collaboration style*
+            </label>
+        </div>
+
+        <label class="checkbox-item">
+            <input type="checkbox" name="collab" value="space">
+            Just use the space
+        </label>
+
+        <label class="checkbox-item">
+            <input type="checkbox" name="collab" value="venue">
+            Co-create with the venue
+        </label>
+
+        <label class="checkbox-item">
+            <input type="checkbox" name="collab" value="community">
+            Involve the community
+        </label>
+
+        <div class="mb-4 mt-4">
+            <label class="proposal-label">
+                Additional details
+            </label>
+
+            <input
+                type="text"
+                name="details"
+                class="proposal-input"
+            >
+        </div>
+
+        <button
+            type="button"
+            class="next-btn"
+            onclick="showSection(3)">
+            Next
+        </button>
+
+    </div>
+
+</section>

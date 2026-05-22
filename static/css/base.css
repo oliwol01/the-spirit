@@ -69,6 +69,10 @@ body {
   color: white;
 }
 
+.hidden {
+    display: none;
+}
+
 .btn-check:checked + .spirit-btn-outline-red {
   background: var(--spirit-red);
   color: white;

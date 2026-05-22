@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Proposal Form
+{% endblock %}
+
+{% block extra_css %}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/proposal.css') }}"
+>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('submit_proposal') }}">
+
+    {% include "sections/proposal/section-1.html" %}
+    {% include "sections/proposal/section-2.html" %}
+    {% include "sections/proposal/section-3.html" %}
+
+</form>
+
+{% endblock %}

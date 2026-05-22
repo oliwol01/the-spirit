@@ -1,11 +1,10 @@
 from flask import render_template
-
+from flask import Flask, render_template, request, redirect, url_for
 
 def init_routes(app):
 
     @app.route("/")
     def home():
-
 
         venues = [
             {
@@ -44,6 +43,14 @@ def init_routes(app):
             "index.html",
             venues=venues
         )
+
+    @app.route("/proposal-form")
+    def proposal_form():
+        return render_template("proposal-form.html")
+    
+    @app.route("/submit-proposal", methods=["POST"])
+    def submit_proposal():
+        return redirect(url_for("home"))
 
     @app.route("/maker-onboarding")
     def maker_onboarding():
