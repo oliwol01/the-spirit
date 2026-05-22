@@ -62,7 +62,7 @@ def init_routes(app):
     @app.route("/venue-onboarding")
     def venue_onboarding():
         return render_template("venue-onboarding.html")
-        ) 
+         
     @app.route("/venue-profile")
     def venue_profile():
         return render_template("venue_profile.html")
