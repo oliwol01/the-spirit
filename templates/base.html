@@ -50,23 +50,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     {% block scripts %}{% endblock %}
 
-    <script>
-function showSection(number) {
-    // hide all sections
-    document.querySelectorAll('.form-section').forEach(section => {
-        section.classList.add('hidden');
-    });
-
-    // show selected section
-    const target = document.getElementById(`section-${number}`);
-    if (target) {
-        target.classList.remove('hidden');
-    }
-
-    // scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
 
 <script>
 document.addEventListener('click', function (e) {

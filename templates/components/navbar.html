@@ -34,12 +34,17 @@
     <div class="d-flex align-items-center gap-2 ms-auto">
       <!-- desktop join -->
 
+      {% if session.get("user_id") %}
+      {% else %}
+
       <a
         href="{{ url_for('role_selection') }}"
         class="btn spirit-btn-red d-none d-lg-block border-0 rounded-pill px-4 py-1 fw-semibold small"
       >
         Join
       </a>
+
+      {% endif %}
 
       <!-- hamburger -->
 
@@ -87,6 +92,24 @@
 
           <!-- auth -->
 
+          {% if session.get("user_id") %}
+
+          <a
+            href="{{ url_for('dashboard') }}"
+            class="btn btn-light d-block w-100 border-0 rounded-3 fw-semibold small py-2 mb-2"
+          >
+            Dashboard
+          </a>
+
+          <a
+            href="{{ url_for('logout') }}"
+            class="btn spirit-btn-red d-block w-100 border-0 rounded-3 fw-semibold small py-2"
+          >
+            Logout
+          </a>
+
+          {% else %}
+
           <a
             href="{{ url_for('role_selection') }}"
             class="btn spirit-btn-red d-block w-100 border-0 rounded-3 fw-semibold small py-2 mb-2"
@@ -100,6 +123,8 @@
           >
             Login
           </a>
+
+          {% endif %}
         </div>
       </div>
     </div>

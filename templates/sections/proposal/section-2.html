@@ -1,67 +1,76 @@
-<section id="section-2" class="proposal-wrapper container py-5 form-section hidden">
+<section
+  id="section-2"
+  class="proposal-wrapper container form-section hidden"
+>
+  <div class="progress-bar">
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+  </div>
+  <div class="proposal-card">
+    <h2 class="section-title fs-2 text-dark">Fit & Collaboration</h2>
 
-    <h1 class="proposal-title text-center mb-5">
-        Proposal Form
-    </h1>
+    <div class="mb-4 mt-4">
+      <label class="proposal-label">
+        What makes this space the right place for you?*
+      </label>
 
-    <div class="proposal-card">
-
-        <h2 class="section-title">Fit & Collaboration</h2>
-
-        <div class="mb-4 mt-4">
-            <label class="proposal-label">
-                What makes this space the right place for you?*
-            </label>
-
-            <input
-                type="text"
-                name="fit_reason"
-                class="proposal-input"
-                maxlength="100"
-                wordlimit="100"
-            >
-        </div>
-
-        <div class="mb-2">
-            <label class="proposal-label">
-                Collaboration style*
-            </label>
-        </div>
-
-        <label class="checkbox-item">
-            <input type="checkbox" name="collab" value="space">
-            Just use the space
-        </label>
-
-        <label class="checkbox-item">
-            <input type="checkbox" name="collab" value="venue">
-            Co-create with the venue
-        </label>
-
-        <label class="checkbox-item">
-            <input type="checkbox" name="collab" value="community">
-            Involve the community
-        </label>
-
-        <div class="mb-4 mt-4">
-            <label class="proposal-label">
-                Additional details
-            </label>
-
-            <input
-                type="text"
-                name="details"
-                class="proposal-input"
-            >
-        </div>
-
-        <button
-            type="button"
-            class="next-btn"
-            onclick="showSection(3)">
-            Next
-        </button>
-
+      <textarea
+        name="venue_fit"
+        class="proposal-textarea"
+        maxlength="500"
+        minlength="20"
+        placeholder="Explain why this venue aligns with your idea, atmosphere, or intended audience"
+        required
+      ></textarea>
     </div>
 
+    <div class="mb-2">
+      <label class="proposal-label"> Collaboration style* </label>
+    </div>
+
+    <label class="checkbox-item">
+      <input type="checkbox" name="collaboration_style" value="space-only" />
+      Just use the space
+    </label>
+
+    <label class="checkbox-item">
+      <input type="checkbox" name="collaboration_style" value="co-create" />
+      Co-create with the venue
+    </label>
+
+    <label class="checkbox-item">
+      <input
+        type="checkbox"
+        name="collaboration_style"
+        value="community-involvement"
+      />
+      Involve the local community
+    </label>
+
+    <div class="mb-4 mt-4">
+      <label class="proposal-label"> Additional details </label>
+
+      <textarea
+        name="additional_details"
+        class="proposal-textarea"
+        maxlength="500"
+        placeholder="Add any additional context, intentions, or ideas for collaboration"
+      ></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between mt-5">
+      <button type="button" class="next-btn" onclick="showSection(1, this)">
+        Back
+      </button>
+
+      <button type="button" class="next-btn" onclick="showSection(3, this)">
+        Next
+      </button>
+    </div>
+  </div>
 </section>

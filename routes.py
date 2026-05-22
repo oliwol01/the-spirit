@@ -1,12 +1,13 @@
-from flask import render_template, request, redirect, url_for
-from werkzeug.security import generate_password_hash
+from flask import render_template, request, redirect, url_for, session
+from werkzeug.security import generate_password_hash, check_password_hash
 from database.queries import (
     create_user,
     create_maker,
     create_venue,
     get_all_venues,
     get_venue_by_id,
-    get_all_events
+    get_all_events,
+    get_user_by_email
 )
 
 
@@ -25,8 +26,26 @@ def init_routes(app):
             events=events
         )
 
-    @app.route("/login")
+    @app.route("/login", methods=["GET", "POST"])
     def login():
+
+        if request.method == "POST":
+
+            email = request.form.get("email")
+            password = request.form.get("password")
+
+            user = get_user_by_email(email)
+
+            if user and check_password_hash(
+                user["password_hash"],
+                password
+            ):
+
+                session["user_id"] = user["user_id"]
+                session["role"] = user["role"]
+
+                return redirect(url_for("dashboard"))
+
         return render_template("auth/login.html")
 
     @app.route("/register")
@@ -50,6 +69,9 @@ def init_routes(app):
                 password_hash,
                 role
             )
+
+            session["user_id"] = user_id
+            session["role"] = role
 
             print(user_id)
 
@@ -99,6 +121,10 @@ def init_routes(app):
         )
     @app.route("/proposal-form")
     def proposal_form():
+
+        if not session.get("user_id"):
+            return redirect(url_for("login"))
+
         return render_template("proposal-form.html")
     
     @app.route("/submit-proposal", methods=["POST"])
@@ -200,6 +226,16 @@ def init_routes(app):
     @app.route("/venue-profile")
     def venue_profile():
         return render_template("venue_profile.html")
+    @app.route("/logout")
+    def logout():
+
+        session.clear()
+
+        return redirect(url_for("home"))
     @app.route("/dashboard")
     def dashboard():
+
+        if not session.get("user_id"):
+            return redirect(url_for("login"))
+
         return render_template("dashboard.html")

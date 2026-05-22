@@ -23,6 +23,26 @@ def create_user(email, password_hash, role):
 
     return user_id
 
+def get_user_by_email(email):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM users
+        WHERE email = ?
+        """,
+        (email,)
+    )
+
+    user = cursor.fetchone()
+
+    connection.close()
+
+    return user
 
 def get_all_venues():
 

@@ -1,81 +1,92 @@
-<section id="section-3" class="proposal-wrapper container py-5 form-section hidden">
+<section
+  id="section-3"
+  class="proposal-wrapper container form-section hidden"
+>
+  <div class="progress-bar">
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+  </div>
 
-    <h1 class="proposal-title text-center mb-5">
-        Proposal Form
-    </h1>
+  <div class="proposal-card">
+    <h2 class="section-title fs-2 text-dark">
+      Experience & Practical Information
+    </h2>
 
-    <div class="proposal-card">
+    <div class="mb-4">
+      <label class="proposal-label"> What happens during the event?* </label>
 
-        <h2 class="section-title">
-            Experience & Practical Information
-        </h2>
-
-        <div class="mb-4">
-            <label class="proposal-label">
-                What happens during the event?*
-            </label>
-
-            <input
-                type="text"
-                name="event_flow"
-                class="proposal-input"
-            >
-        </div>
-
-        <div class="mb-4">
-            <label class="proposal-label">
-                What should people feel or take away?*
-            </label>
-
-            <input
-                type="text"
-                name="takeaway"
-                class="proposal-input"
-            >
-        </div>
-
-        <div class="mb-2">
-            <label class="proposal-label">
-                Expected audience size?*
-            </label>
-        </div>
-
-        <label class="checkbox-item">
-            <input type="radio" name="audience" value="5-10">
-            5-10 people
-        </label>
-
-        <label class="checkbox-item">
-            <input type="radio" name="audience" value="20-50">
-            20-50 people
-        </label>
-
-        <label class="checkbox-item">
-            <input type="radio" name="audience" value="50-100">
-            50-100 people
-        </label>
-
-        <label class="checkbox-item">
-            <input type="radio" name="audience" value="100+">
-            100+ people
-        </label>
-            <div class="mb-4">
-            <label class="proposal-label">
-                Any specific technical requirements?*
-            </label>
-
-            <textarea
-                name="description"
-                class="proposal-textarea"
-                maxlength="100"
-            ></textarea>
-        </div>
-
-        <button type="submit" class="next-btn">
-            Submit
-        </button>
-
+      <textarea
+        name="event_experience"
+        class="proposal-textarea"
+        maxlength="1000"
+        minlength="20"
+        placeholder="Describe how the event unfolds and what participants experience"
+        required
+      ></textarea>
     </div>
 
+    <div class="mb-4">
+      <label class="proposal-label">
+        What should people feel or take away?*
+      </label>
 
+      <textarea
+        name="audience_takeaway"
+        class="proposal-textarea"
+        maxlength="500"
+        minlength="10"
+        placeholder="Describe the emotional, intellectual, or communal impact you hope to create"
+        required
+      ></textarea>
+    </div>
+
+    <div class="mb-2">
+      <label class="proposal-label"> Expected audience size?* </label>
+    </div>
+
+    <label class="checkbox-item">
+      <input type="radio" name="audience_size" value="5-10" required />
+      5-10 people
+    </label>
+
+    <label class="checkbox-item">
+      <input type="radio" name="audience_size" value="20-50" />
+      20-50 people
+    </label>
+
+    <label class="checkbox-item">
+      <input type="radio" name="audience_size" value="50-100" />
+      50-100 people
+    </label>
+
+    <label class="checkbox-item">
+      <input type="radio" name="audience_size" value="100+" />
+      100+ people
+    </label>
+    <div class="mb-4 mt-4">
+      <label class="proposal-label">
+        Any specific technical requirements?
+      </label>
+
+      <textarea
+        name="technical_requirements"
+        class="proposal-textarea"
+        maxlength="500"
+        placeholder="Mention lighting, sound, seating, instruments, projection, or other technical needs"
+      ></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between mt-5">
+      <button type="button" class="next-btn" onclick="showSection(2, this)">
+        Back
+      </button>
+
+      <button type="submit" class="next-btn">Submit Proposal</button>
+    </div>
+  </div>
 </section>

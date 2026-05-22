@@ -14,7 +14,7 @@
         Login
       </h1>
 
-      <form>
+      <form method="POST" action="{{ url_for('login') }}">
 
         <!-- EMAIL -->
 
@@ -30,7 +30,9 @@
           <input
             type="email"
             id="email"
+            name="email"
             class="form-control border-0 rounded-4 py-3 px-4"
+            required
           >
 
         </div>
@@ -49,7 +51,9 @@
           <input
             type="password"
             id="password"
+            name="password"
             class="form-control border-0 rounded-4 py-3 px-4"
+            required
           >
 
         </div>

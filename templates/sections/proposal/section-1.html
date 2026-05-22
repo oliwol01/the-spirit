@@ -1,70 +1,114 @@
-<section id="section-1" class="proposal-wrapper container py-5 form-section">
+<section id="section-1" class="proposal-wrapper container form-section">
+  <div class="progress-bar">
+    <div class="progress-line"></div>
+    <div class="progress-dot active"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+    <div class="progress-dot"></div>
+    <div class="progress-line"></div>
+  </div>
 
-    <h1 class="proposal-title text-center mb-5">
-        Proposal Form
-    </h1>
+  <div class="proposal-card">
+    <h2 class="section-title fs-2 text-dark">Your Idea</h2>
 
-    <div class="proposal-card">
+    <!-- TITLE -->
+    <div class="mb-4">
+      <label class="proposal-label"> Title of Performance* </label>
 
-        <h2 class="section-title">Your Idea</h2>
-
-        <!-- TITLE -->
-        <div class="mb-4">
-            <label class="proposal-label">
-                Title of Performance
-            </label>
-
-            <input
-                type="text"
-                name="title"
-                class="proposal-input"
-                maxlength="100"
-            >
-        </div>
-
-        <!-- DESCRIPTION -->
-        <div class="mb-4">
-            <label class="proposal-label">
-                Describe the core of what you want to create*
-            </label>
-
-            <textarea
-                name="description"
-                class="proposal-textarea"
-                maxlength="100"
-            ></textarea>
-        </div>
-
-        <!-- TAGS -->
-        <div class="mb-5">
-            <label class="proposal-label">
-                What kind of format is it?*
-            </label>
-
-            <div class="tag-container">
-
-                <button type="button" class="tag">Music</button>
-                <button type="button" class="tag">Mindfulness</button>
-                <button type="button" class="tag">Ceremony</button>
-                <button type="button" class="tag">Silence</button>
-                <button type="button" class="tag">Storytelling</button>
-                <button type="button" class="tag">Dance</button>
-                <button type="button" class="tag">Philosophy</button>
-                <button type="button" class="tag">Visual Arts</button>
-                <button type="button" class="tag">Theatre</button>
-                <button type="button" class="tag">Concert</button>
-                <button type="button" class="tag">Other</button>
-
-            </div>
-        </div>
-
-        <button
-            type="button"
-            class="next-btn"
-            onclick="showSection(2)">
-            Next
-        </button>
-
+      <input
+        type="text"
+        name="title"
+        class="proposal-input"
+        maxlength="100"
+        minlength="3"
+        placeholder="Enter the title of your proposal"
+        required
+      />
     </div>
 
+    <!-- DESCRIPTION -->
+    <div class="mb-4">
+      <label class="proposal-label">
+        Describe the core of what you want to create*
+      </label>
+
+      <textarea
+        name="core_idea"
+        class="proposal-textarea"
+        maxlength="1000"
+        minlength="20"
+        placeholder="Describe the atmosphere, intention, and experience you want to create"
+        required
+      ></textarea>
+    </div>
+
+    <!-- TAGS -->
+    <div class="mb-5">
+      <label class="proposal-label"> What kind of format is it?* (Select all that apply)</label>
+
+      <div class="tag-container proposal-tags-grid">
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="music" />
+          <span class="tag">Music</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="mindfulness" />
+          <span class="tag">Mindfulness</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="ceremony" />
+          <span class="tag">Ceremony</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="silence" />
+          <span class="tag">Silence</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="storytelling" />
+          <span class="tag">Storytelling</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="dance" />
+          <span class="tag">Dance</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="philosophy" />
+          <span class="tag">Philosophy</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="visual-arts" />
+          <span class="tag">Visual Arts</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="theatre" />
+          <span class="tag">Theatre</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="concert" />
+          <span class="tag">Concert</span>
+        </label>
+
+        <label class="tag-option">
+          <input type="checkbox" name="format_tags" value="other" />
+          <span class="tag">Other</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <button type="button" class="next-btn" onclick="showSection(2, this)">
+        Next
+      </button>
+    </div>
+  </div>
 </section>
