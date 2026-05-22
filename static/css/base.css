@@ -72,10 +72,4 @@ body {
 .hidden {
     display: none;
 }
-<script>
-document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('tag')) {
-        e.target.classList.toggle('active');
-    }
-});
-</script>
+
