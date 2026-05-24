@@ -18,7 +18,8 @@ body {
 .spirit-footer-heading,
 .spirit-title-page,
 .spirit-hero-subtitle,
-.spirit-user-selector-title {
+.spirit-user-selector-title, 
+.spirit-font {
   font-family: "Cormorant Garamond", serif;
 }
 

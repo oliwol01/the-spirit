@@ -1,0 +1,100 @@
+<div class="px-4 pt-4 pb-2 d-flex align-items-center justify-content-between">
+  <h2 class="sidebar-title fs-3 fw-semibold mb-0">Inbox</h2>
+  <button class="btn btn-sm d-md-none border-0 p-0" onclick="toggleSidebar()">
+    <i class="bi bi-list fs-4"></i>
+  </button>
+</div>
+
+<div class="sidebar-body" id="sidebar-body">
+
+  <div class="inbox-group pt-2">
+    <button class="group-toggle" onclick="toggleGroup(this)">
+      <span class="group-label">
+        {% if role == "maker" %}
+          PENDING
+        {% else %}
+          PENDING
+        {% endif %}
+      </span>
+      <span class="group-badge">{{ proposals|length }}</span>
+    </button>
+    <div class="group-items px-3">
+      {% if proposals %}
+        {% set proposal = proposals[0] %}
+        <div class="inbox-item active" onclick="selectItem(this)">
+          <span class="item-title">{{ proposal['title'] }}</span>
+          <span class="item-sub">{{ proposal['maker_name'] }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="inbox-group pt-2">
+    <button class="group-toggle" onclick="toggleGroup(this)">
+      <span class="group-label">
+        {% if role == "maker" %}
+          ACCEPTED
+        {% else %}
+          ACTIVE
+        {% endif %}
+      </span>
+      <span class="group-badge">3</span>
+    </button>
+
+    <div class="group-items px-3">
+
+      <div class="inbox-item" onclick="selectItem(this)">
+        <span class="item-title">Spoken Word Performance</span>
+
+        <span class="item-sub">
+          {% if role == "maker" %}
+            Apostolisch Genootschap
+          {% else %}
+            Maker 1
+          {% endif %}
+        </span>
+      </div>
+
+      <div class="inbox-item" onclick="selectItem(this)">
+        <span class="item-title">Exhibition</span>
+
+        <span class="item-sub">
+          {% if role == "maker" %}
+            De Nieuwe Kerk
+          {% else %}
+            Maker 2
+          {% endif %}
+        </span>
+      </div>
+
+      <div class="inbox-item" onclick="selectItem(this)">
+        <span class="item-title">Piano Concert</span>
+
+        <span class="item-sub">
+          {% if role == "maker" %}
+            Podium Mozaïek
+          {% else %}
+            Maker 3
+          {% endif %}
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="inbox-group pt-2">
+    <button class="group-toggle" onclick="toggleGroup(this)">
+      <span class="group-label">
+        {% if role == "maker" %}
+          DECLINED
+        {% else %}
+          COMPLETED
+        {% endif %}
+      </span>
+      <span class="group-badge">4</span>
+      <span class="group-chevron">▾</span>
+    </button>
+    <div class="group-items" style="display:none"></div>
+  </div>
+
+</div>

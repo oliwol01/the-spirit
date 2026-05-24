@@ -1,0 +1,135 @@
+{% if proposals %}
+
+  {% set proposal = proposals[0] %}
+
+  <div class="border rounded-3 overflow-hidden">
+    <div class="detail-main">
+
+      <div class="p-4">
+        <h1 class="detail-title fs-2 mb-1">{{ proposal['title'] }}</h1>
+        <p class="mb-3" style="font-size:0.9rem;">
+
+          {% if role == "venue" %}
+
+            by <a href="#" class="fw-semibold text-danger text-decoration-none">
+              {{ proposal['maker_name'] }}
+            </a>
+
+          {% elif role == "maker" %}
+
+            sent to <a href="/venues/{{ proposal['venue_id'] }}" class="fw-semibold text-danger text-decoration-none">
+              {{ proposal['venue_name'] }}
+            </a>
+
+          {% endif %}
+
+        </p>
+        <p class="mb-0 lh-lg text-truncate-4" style="font-size:0.85rem;">{{ proposal['core_idea'] }}</p>
+      </div>
+
+      <div class="detail-meta p-4 border-start">
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-grid-3x3-gap me-1"></i>FORMAT</span>
+          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['format_tags'] }}</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-building me-1"></i>VENUE FIT</span>
+          <span class="fw-medium text-truncate-3" style="font-size:0.85rem;">{{ proposal['venue_fit'] }}</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-people me-1"></i>AUDIENCE SIZE</span>
+          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['audience_size'] }}</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-mic me-1"></i>TECHNICAL NEEDS</span>
+          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['technical_requirements'] or 'None specified' }}</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-diagram-3 me-1"></i>COLLABORATION TYPE</span>
+          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['collaboration_style'] or 'Not specified' }}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="px-4 py-3 d-flex justify-content-end">
+      <button class="btn btn-sm btn-outline-secondary rounded-pill px-4" type="button">See More Details</button>
+    </div>
+  </div>
+
+  {% if role == "venue" %}
+
+    <div class="d-flex flex-column flex-sm-row gap-2">
+      <button class="action-btn accept flex-fill" type="button" onclick="activateReply(this, 'acceptance')">
+        ✓ &nbsp;Accept Collaboration
+      </button>
+
+      <button class="action-btn clarify flex-fill" type="button" onclick="activateReply(this, 'clarification')">
+        ? &nbsp;Request Clarification
+      </button>
+
+      <button class="action-btn decline flex-fill" type="button" onclick="activateReply(this, 'decline')">
+        ✕ &nbsp;Decline Proposal
+      </button>
+    </div>
+
+    <div class="message-thread"></div>
+
+    <div class="border rounded-3 overflow-hidden">
+      <textarea class="reply-input w-100 p-4 border-0" placeholder="Write a response ..." disabled></textarea>
+
+      <div class="reply-footer d-flex justify-content-end px-3 py-2 bg-light">
+        <button class="send-btn" type="button" onclick="sendUpdate()" disabled>
+          SEND UPDATE
+        </button>
+      </div>
+    </div>
+
+  {% elif role == "maker" %}
+
+    <div class="border rounded-3 overflow-hidden bg-white">
+
+      <div class="p-4">
+
+        <p class="text-uppercase small fw-semibold text-muted mb-2">
+          Proposal Status
+        </p>
+
+        {% if proposal['status'] == 'accepted' %}
+
+          <div class="alert alert-success mb-0">
+            <strong>Proposal Accepted.</strong><br>
+            Venue would like to continue the collaboration.
+          </div>
+
+        {% elif proposal['status'] == 'declined' %}
+
+          <div class="alert alert-danger mb-0">
+            <strong>Proposal Declined.</strong><br>
+            The venue decided not to move forward.
+          </div>
+
+        {% else %}
+
+          <div class="alert alert-warning mb-0">
+            <strong>Waiting for venue response.</strong><br>
+            Your proposal is currently being reviewed.
+          </div>
+
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  {% endif %}
+
+{% else %}
+
+  <div class="border rounded-3 text-center py-5">
+    <i class="bi bi-chat-square-text fs-1 text-muted"></i>
+    <h2 class="fs-4 mt-4 mb-2">Select a proposal</h2>
+    <p class="text-muted mb-0">Proposal details will appear here.</p>
+  </div>
+
+{% endif %}

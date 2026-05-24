@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard - The Spirit{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block extra_css %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" />
@@ -10,38 +10,21 @@
 {% block content %}
 <main class="container py-5">
 
-  <h1 class="form-title text-center mb-5">Hello, Apostolisch Genootschap</h1>
+  <h1 class="form-title text-center mb-5">
+    Hello, {{ display_name }}
+  </h1>
 
-  <div class="row gx-0 stats-bar mb-5">
-    <div class="col-12 col-md-4 text-center stat">
-      <p class="stat-number">2</p>
-      <p class="fw-semibold">Awaiting Response</p>
-      <p class="small text-muted">Proposals waiting for your response</p>
-    </div>
-    <div class="col-12 col-md-4 text-center stat stat-middle">
-      <p class="stat-number">1</p>
-      <p class="fw-semibold">Awaiting Clarification</p>
-      <p class="small text-muted">Makers are waiting for your reply</p>
-    </div>
-    <div class="col-12 col-md-4 text-center stat">
-      <p class="stat-number">3</p>
-      <p class="fw-semibold">Active Collaborations</p>
-      <p class="small text-muted">Ongoing collaborations in progress</p>
-    </div>
-  </div>
+  {% if role == "venue" %}
 
-  <p class="subheader mb-4">Manage</p>
+    {% include "sections/dashboard/venue-stats.html" %}
+    {% include "sections/dashboard/venue-actions.html" %}
 
-  <div class="d-flex gap-4">
-    <a href="#" class="manage-card text-decoration-none text-center">
-      <i class="bi bi-envelope manage-card-icon"></i>
-      <p class="spirit-text-red fw-semibold mt-3 mb-0">Inbox</p>
-    </a>
-    <a href="#" class="manage-card text-decoration-none text-center">
-      <i class="bi bi-house manage-card-icon"></i>
-      <p class="spirit-text-red fw-semibold mt-3 mb-0">Venue Profile</p>
-    </a>
-  </div>
+  {% elif role == "maker" %}
+
+    {% include "sections/dashboard/maker-stats.html" %}
+    {% include "sections/dashboard/maker-actions.html" %}
+
+  {% endif %}
 
 </main>
 {% endblock %}

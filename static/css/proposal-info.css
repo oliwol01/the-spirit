@@ -1,0 +1,70 @@
+.proposal-info-page {
+  max-width: 920px;
+}
+.proposal-info-heading {
+  font-family: "Cormorant Garamond", serif;
+  color: #e60000;
+}
+
+.proposal-info-lead {
+  max-width: 620px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.proposal-info-card {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.proposal-info-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(220, 53, 69, 0.14);
+  color: #e60000;
+  font-size: 1.15rem;
+}
+
+.proposal-info-card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: #e60000;
+}
+
+.proposal-info-price {
+  color: #e60000;
+  font-weight: 700;
+}
+
+.proposal-info-note {
+  border-left: 3px solid #e60000;
+  padding-left: 1rem;
+  color: rgba(0, 0, 0, 0.72);
+  line-height: 1.7;
+}
+
+.proposal-info-alert {
+  background: rgba(220, 53, 69, 0.12);
+  color: rgba(0, 0, 0, 0.76);
+  line-height: 1.7;
+}
+
+@media (max-width: 576px) {
+
+  .proposal-info-page {
+    max-width: 100%;
+  }
+
+  .proposal-info-card-title {
+    font-size: 1.7rem;
+  }
+
+  .proposal-info-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+}

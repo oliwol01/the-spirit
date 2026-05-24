@@ -1,0 +1,46 @@
+
+
+{% if venue and venue['is_published'] == 0 %}
+
+  <div class="alert alert-warning border-0 rounded-4 px-4 py-4 mb-5 text-center">
+
+    <h2 class="fs-5 fw-semibold mb-2">
+      Your venue profile is not published yet
+    </h2>
+
+    <p class="mb-0 text-muted">
+      Please complete the remaining venue profile information in order to publish your venue.
+      Published venues become visible to makers and can receive collaboration proposals.
+    </p>
+
+  </div>
+
+{% endif %}
+
+<div class="row gx-0 stats-bar mb-5">
+
+  <div class="col-12 col-md-4 text-center stat">
+    <p class="stat-number">2</p>
+    <p class="fw-semibold">Awaiting Response</p>
+    <p class="small text-muted">
+      Proposals waiting for your response
+    </p>
+  </div>
+
+  <div class="col-12 col-md-4 text-center stat stat-middle">
+    <p class="stat-number">1</p>
+    <p class="fw-semibold">Awaiting Clarification</p>
+    <p class="small text-muted">
+      Makers are waiting for your reply
+    </p>
+  </div>
+
+  <div class="col-12 col-md-4 text-center stat">
+    <p class="stat-number">3</p>
+    <p class="fw-semibold">Confirmed Collaborations</p>
+    <p class="small text-muted">
+      Accepted collaborations in progress
+    </p>
+  </div>
+
+</div>

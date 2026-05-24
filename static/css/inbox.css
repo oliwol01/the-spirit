@@ -1,0 +1,264 @@
+/* ── Shell ── */
+.inbox-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 80vh;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+}
+
+.inbox-left {
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ── Sidebar typography ── */
+.sidebar-title { font-family: "Cormorant Garamond", serif; }
+
+/* ── Group toggle: left-aligned, not centered ── */
+.group-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 6px 16px;
+  cursor: pointer;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.group-label {
+  flex: 1;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #aaa;
+}
+
+.group-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #666;
+  background: #f0f0f0;
+  border-radius: 99px;
+  padding: 1px 8px;
+}
+
+.group-chevron { font-size: 0.7rem; color: #bbb; }
+
+/* ── Sidebar items ── */
+.inbox-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 16px;
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: background 0.15s;
+}
+
+.inbox-item:hover  { background: #fdf5f5; }
+.inbox-item.active { background: #fdecea; border-color: #f5c6c2; }
+
+.item-title { font-size: 0.88rem; font-weight: 600; color: #1a1a1a; }
+.item-sub   { font-size: 0.78rem; color: #999; }
+
+/* ── Detail title ── */
+.detail-title { font-family: "Cormorant Garamond", serif; color: #e60000; margin: 0; }
+
+/* ── Detail layout: equal halves so both sides breathe ── */
+.detail-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 0;
+}
+
+/* ── Meta: single column so labels/values have full width ── */
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.meta-block { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+.meta-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #bbb;
+}
+
+/* ── Clamp long text so card doesn't grow too tall ── */
+.text-truncate-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Action buttons ── */
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.action-btn:hover         { background: #f9f9f9; border-color: #adb5bd; }
+.action-btn.accept:hover  { border-color: #27ae60; color: #27ae60; }
+.action-btn.decline:hover { border-color: #e60000; color: #e60000; }
+
+/* ── Reply ── */
+.reply-input {
+  min-height: 110px;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: #333;
+  display: block;
+}
+.reply-input::placeholder { color: #ccc; }
+
+/* ── Send button ── */
+.send-btn {
+  background: #e60000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.send-btn:hover    { background: #b30000; }
+.send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
+  .inbox-shell {
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+  }
+  .inbox-left {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+    max-height: 260px;
+  }
+  .sidebar-body.collapsed { display: none; }
+  .detail-main { grid-template-columns: 1fr; }
+  .detail-meta {
+    border-left: none !important;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .inbox-right  { padding: 16px !important; gap: 14px !important; }
+  .detail-meta  { grid-template-columns: 1fr; }
+  .action-btn   { font-size: 0.75rem; padding: 10px 8px; }
+}
+
+/* ── Action button selected state ── */
+.action-btn.selected          { background: #f9f9f9; border-color: #adb5bd; }
+.action-btn.accept.selected   { border-color: #27ae60; color: #27ae60; background: #f0faf4; }
+.action-btn.clarify.selected  { border-color: #555; color: #555; background: #f7f7f7; }
+.action-btn.decline.selected  { border-color: #e60000; color: #e60000; background: #fff5f5; }
+
+/* ── Message thread ── */
+.message-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px 2px;
+}
+
+.message-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 70%;
+}
+
+.message-wrap.outgoing { align-self: flex-end; align-items: flex-end; }
+.message-wrap.incoming { align-self: flex-start; align-items: flex-start; }
+
+.message-bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+}
+
+.message-wrap.outgoing .message-bubble {
+  background: #e60000;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.message-wrap.incoming .message-bubble {
+  background: #f1f1f1;
+  border-bottom-left-radius: 4px;
+}
+
+.message-time {
+  font-size: 0.68rem;
+  color: #bbb;
+  padding: 0 4px;
+}
+
+/* ── Typing indicator ── */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  background: #aaa;
+  border-radius: 50%;
+  animation: typing-bounce 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.15s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-5px); opacity: 1; }
+}

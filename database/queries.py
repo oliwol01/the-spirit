@@ -247,3 +247,164 @@ def create_venue(
     connection.commit()
 
     connection.close()
+
+
+# New function to create a proposal
+def create_proposal(
+    maker_id,
+    venue_id,
+    title,
+    core_idea,
+    format_tags,
+    venue_fit,
+    collaboration_style,
+    additional_details,
+    event_experience,
+    audience_takeaway,
+    audience_size,
+    technical_requirements
+):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        INSERT INTO proposals (
+            maker_id,
+            venue_id,
+            title,
+            core_idea,
+            format_tags,
+            venue_fit,
+            collaboration_style,
+            additional_details,
+            event_experience,
+            audience_takeaway,
+            audience_size,
+            technical_requirements
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        (
+            maker_id,
+            venue_id,
+            title,
+            core_idea,
+            format_tags,
+            venue_fit,
+            collaboration_style,
+            additional_details,
+            event_experience,
+            audience_takeaway,
+            audience_size,
+            technical_requirements
+        )
+    )
+
+    connection.commit()
+
+    connection.close()
+
+
+# Function to get a maker by user_id
+def get_maker_by_user_id(user_id):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM makers
+        WHERE user_id = ?
+        """,
+        (user_id,)
+    )
+
+    maker = cursor.fetchone()
+
+    connection.close()
+
+    return maker
+
+def get_proposals_by_venue_id(venue_id):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            proposals.*,
+            makers.maker_name
+        FROM proposals
+        JOIN makers
+            ON proposals.maker_id = makers.maker_id
+        WHERE proposals.venue_id = ?
+        ORDER BY proposals.proposal_id DESC
+        """,
+        (venue_id,)
+    )
+
+    proposals = cursor.fetchall()
+
+    connection.close()
+
+    return proposals
+
+
+def get_proposals_by_maker_id(maker_id):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            proposals.*,
+            venues.name AS venue_name,
+            venues.city AS venue_city,
+            venues.venue_type
+        FROM proposals
+        JOIN venues
+            ON proposals.venue_id = venues.venue_id
+        WHERE proposals.maker_id = ?
+        ORDER BY proposals.proposal_id DESC
+        """,
+        (maker_id,)
+    )
+
+    proposals = cursor.fetchall()
+
+    connection.close()
+
+    return proposals
+
+
+def get_venue_by_user_id(user_id):
+
+    connection = get_db_connection()
+
+    cursor = connection.cursor()
+
+    cursor.execute(
+        """
+        SELECT *
+        FROM venues
+        WHERE user_id = ?
+        ORDER BY venue_id DESC
+        LIMIT 1
+        """,
+        (user_id,)
+    )
+
+    venue = cursor.fetchone()
+
+    connection.close()
+
+    return venue

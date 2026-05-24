@@ -1,0 +1,106 @@
+{% extends "base.html" %} {% block title %} Before You Begin {% endblock %} {%
+block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/proposal-info.css') }}"
+/>
+{% endblock %} {% block content %}
+
+<section class="container py-4 proposal-info-page">
+  <div class="text-center mb-5">
+    <h1 class="display-4 text-center mb-3 proposal-info-heading">
+      Before You Begin
+    </h1>
+
+    <p class="mx-auto proposal-info-lead mb-0">
+      Please read the information below before filling out the proposal form.
+      This will help you understand the pricing and availability process.
+    </p>
+  </div>
+
+  <div class="vstack gap-4">
+    <!-- PRICING -->
+
+    <article
+      class="card border-danger-subtle rounded-5 shadow-sm proposal-info-card"
+    >
+      <div class="card-body p-4 p-md-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-auto">
+            <div class="proposal-info-icon">
+              <i class="bi bi-tag-fill"></i>
+            </div>
+          </div>
+
+          <div class="col">
+            <h2 class="proposal-info-card-title mb-3">Pricing</h2>
+
+            <p class="mb-3 fs-6 lh-lg">
+              The price for the venue is
+              <span class="proposal-info-price"> €{{ venue['price'] }} per hour. </span>
+            </p>
+
+            <p class="proposal-info-note mb-0">
+              The final duration and total cost can be discussed and confirmed
+              directly with the venue maker.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- AVAILABILITY -->
+
+    <article
+      class="card border-danger-subtle rounded-5 shadow-sm proposal-info-card"
+    >
+      <div class="card-body p-4 p-md-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-auto">
+            <div class="proposal-info-icon">
+              <i class="bi bi-calendar-event-fill"></i>
+            </div>
+          </div>
+
+          <div class="col">
+            <h2 class="proposal-info-card-title mb-3">Availability</h2>
+
+            <p class="mb-3 fs-6 lh-lg">
+              Availability of the venue is not displayed here. You can discuss
+              your preferred date and time directly with the venue maker.
+            </p>
+
+            <p class="proposal-info-note mb-0">
+              We recommend submitting your proposal in advance to increase the
+              chances of confirming your preferred date.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ALERT -->
+
+    <div
+      class="alert alert-danger border-danger-subtle rounded-4 d-flex gap-3 align-items-start mb-0 proposal-info-alert"
+    >
+      <i class="bi bi-info-circle fs-5 flex-shrink-0"></i>
+
+      <div>
+        After you submit the proposal, the venue maker will review it and get in
+        touch with you to confirm availability and other details.
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a
+      href="{{ url_for('proposal_form', venue_id=venue_id) }}"
+      class="btn btn-dark rounded-4 px-4 py-2 fw-semibold"
+    >
+      Continue to Proposal Form
+    </a>
+  </div>
+</section>
+
+{% endblock %}
