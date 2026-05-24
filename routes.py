@@ -87,7 +87,6 @@ def init_routes(app):
             session["user_id"] = user_id
             session["role"] = role
 
-            print(user_id)
 
             if role == "maker":
                 return redirect(
@@ -133,6 +132,7 @@ def init_routes(app):
             venue=venue,
             events=events
         )
+
     @app.route("/proposal-form/<int:venue_id>")
     def proposal_form(venue_id):
 
@@ -294,13 +294,34 @@ def init_routes(app):
          
     @app.route("/venue-profile")
     def venue_profile():
-        return render_template("venue_profile.html")
+
+        if not session.get("user_id"):
+            return redirect(url_for("login"))
+
+        if session.get("role") != "venue":
+            return redirect(url_for("dashboard"))
+
+        venue = get_venue_by_user_id(session.get("user_id"))
+
+        if not venue:
+            return redirect(url_for("dashboard"))
+
+        return render_template(
+            "venue_profile.html",
+            venue=venue
+        )
+
+    @app.route("/maker-profile")
+    def maker_profile():
+        return render_template("maker-page.html")
+
     @app.route("/logout")
     def logout():
 
         session.clear()
 
         return redirect(url_for("home"))
+
     @app.route("/dashboard")
     def dashboard():
 

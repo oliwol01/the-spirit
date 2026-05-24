@@ -7,11 +7,11 @@
 
       <div class="p-4">
         <h1 class="detail-title fs-2 mb-1">{{ proposal['title'] }}</h1>
-        <p class="mb-3" style="font-size:0.9rem;">
+        <p class="mb-3 fs-6">
 
           {% if role == "venue" %}
 
-            by <a href="#" class="fw-semibold text-danger text-decoration-none">
+            by <a href="{{ url_for('maker_profile') }}" class="fw-semibold text-danger text-decoration-none">
               {{ proposal['maker_name'] }}
             </a>
 
@@ -24,29 +24,33 @@
           {% endif %}
 
         </p>
-        <p class="mb-0 lh-lg text-truncate-4" style="font-size:0.85rem;">{{ proposal['core_idea'] }}</p>
+        <p class="mb-0 lh-lg text-truncate-4 small">{{ proposal['core_idea'] }}</p>
       </div>
 
       <div class="detail-meta p-4 border-start">
         <div class="meta-block">
           <span class="meta-label"><i class="bi bi-grid-3x3-gap me-1"></i>FORMAT</span>
-          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['format_tags'] }}</span>
+          <span class="fw-medium small">{{ proposal['format_tags'] }}</span>
         </div>
         <div class="meta-block">
           <span class="meta-label"><i class="bi bi-building me-1"></i>VENUE FIT</span>
-          <span class="fw-medium text-truncate-3" style="font-size:0.85rem;">{{ proposal['venue_fit'] }}</span>
+          <span class="fw-medium text-truncate-3 small">{{ proposal['venue_fit'] }}</span>
         </div>
         <div class="meta-block">
           <span class="meta-label"><i class="bi bi-people me-1"></i>AUDIENCE SIZE</span>
-          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['audience_size'] }}</span>
+          <span class="fw-medium small">{{ proposal['audience_size'] }}</span>
         </div>
         <div class="meta-block">
           <span class="meta-label"><i class="bi bi-mic me-1"></i>TECHNICAL NEEDS</span>
-          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['technical_requirements'] or 'None specified' }}</span>
+          <span class="fw-medium small">{{ proposal['technical_requirements'] or 'None specified' }}</span>
         </div>
         <div class="meta-block">
           <span class="meta-label"><i class="bi bi-diagram-3 me-1"></i>COLLABORATION TYPE</span>
-          <span class="fw-medium" style="font-size:0.85rem;">{{ proposal['collaboration_style'] or 'Not specified' }}</span>
+          <span class="fw-medium small">{{ proposal['collaboration_style'] or 'Not specified' }}</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label"><i class="bi bi-telephone me-1"></i>CONTACT DETAILS</span>
+          <span class="fw-medium small">+31 6 1234 5678</span>
         </div>
       </div>
 

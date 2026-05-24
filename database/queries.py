@@ -23,6 +23,7 @@ def create_user(email, password_hash, role):
 
     return user_id
 
+
 def get_user_by_email(email):
 
     connection = get_db_connection()
@@ -43,6 +44,7 @@ def get_user_by_email(email):
     connection.close()
 
     return user
+
 
 def get_all_venues():
 
@@ -86,7 +88,6 @@ def get_venue_by_id(venue_id):
     connection.close()
 
     return venue
-
 
 
 def get_all_events():
@@ -249,7 +250,6 @@ def create_venue(
     connection.close()
 
 
-# New function to create a proposal
 def create_proposal(
     maker_id,
     venue_id,
@@ -308,7 +308,6 @@ def create_proposal(
     connection.close()
 
 
-# Function to get a maker by user_id
 def get_maker_by_user_id(user_id):
 
     connection = get_db_connection()
@@ -329,6 +328,7 @@ def get_maker_by_user_id(user_id):
     connection.close()
 
     return maker
+
 
 def get_proposals_by_venue_id(venue_id):
 
