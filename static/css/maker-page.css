@@ -1,0 +1,108 @@
+/* ── HERO ────────────────────── */
+#venue-hero {
+  overflow: hidden;
+}
+
+.venue-hero-image {
+  height: 80vh;
+  object-fit: cover;
+}
+
+/* ── BIO + MESSAGE ────────────────────── */
+.venue-details-title {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--spirit-red);
+  line-height: 1;
+}
+
+.venue-maker-message {
+  max-width: 320px;
+}
+
+.venue-maker-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 1px;
+  background: #f3cfcf;
+}
+
+.venue-maker-border-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 120px;
+  background: #f3cfcf;
+}
+
+.venue-maker-border-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 75%;
+  height: 1px;
+  background: #f3cfcf;
+}
+
+.venue-maker-border-bottom::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 120px;
+  background: #f3cfcf;
+}
+
+.venue-maker-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #1E1E1E;
+}
+
+.venue-maker-text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4f4f4f;
+  max-width: 220px;
+}
+
+/* ── THEMES + GENRE ────────────────────── */
+.venue-details-card {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid #ece4e4;
+}
+
+.venue-subheading {
+  font-family: "Inter", sans-serif;
+  color: #8d7474;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.venue-tag-pill {
+  background: #f6dddd;
+  color: #8a4b4b;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ── SOCIAL + LINKS ────────────────────── */
+.venue-maker-heading.red {
+  color: var(--spirit-red);
+}
+
+/* ── PREVIOUS EVENTS ────────────────────── */
+.maker-event-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.maker-event-card p {
+  font-family: "Inter", sans-serif;
+}
