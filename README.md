@@ -24,3 +24,8 @@ The platform currently supports:
 
 - Some profile pages are currently static placeholders for demonstration purposes.
 - Inbox messaging is currently prototype/demo functionality.
+
+## Figma design link
+
+https://www.figma.com/design/sQAj1iNHic90Xybvt26KUm/The-Spirit-Platform?node-id=0-1&t=rJCmOJZbbfmBmiuC-1
+
