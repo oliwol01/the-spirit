@@ -29,3 +29,8 @@ The platform currently supports:
 
 https://www.figma.com/design/sQAj1iNHic90Xybvt26KUm/The-Spirit-Platform?node-id=0-1&t=rJCmOJZbbfmBmiuC-1
 
+## Web link 
+
+https://thespirit.eu.pythonanywhere.com/ 
+
+
